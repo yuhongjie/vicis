@@ -418,14 +418,14 @@ Validation.addAllThese([
 	['validate-select', 'Please select an option.', function(v) {
                 return ((v != "none") && (v != null) && (v.length != 0));
             }],
-    ['required-entry', 'This is a required field.', function(v) {
+    ['required-entry', '必填字段', function(v) {
                 return !Validation.get('IsEmpty').test(v);
             }],
-    ['validate-number', 'Please enter a valid number in this field.', function(v) {
+    ['validate-number', '请输入一个有效的号码。', function(v) {
                 return Validation.get('IsEmpty').test(v)
                     || (!isNaN(parseNumber(v)) && /^\s*-?\d*(\.\d*)?\s*$/.test(v));
             }],
-    ['validate-number-range', 'The value is not within the specified range.', function(v, elm) {
+    ['validate-number-range', '请输入有效值', function(v, elm) {
                 if (Validation.get('IsEmpty').test(v)) {
                     return true;
                 }
@@ -452,7 +452,7 @@ Validation.addAllThese([
     ['validate-digits', 'Please use numbers only in this field. Please avoid spaces or other characters such as dots or commas.', function(v) {
                 return Validation.get('IsEmpty').test(v) ||  !/[^\d]/.test(v);
             }],
-    ['validate-digits-range', 'The value is not within the specified range.', function(v, elm) {
+    ['validate-digits-range', '值不是在指定的范围内。', function(v, elm) {
                 if (Validation.get('IsEmpty').test(v)) {
                     return true;
                 }
@@ -523,19 +523,19 @@ Validation.addAllThese([
             return !dependentElements.length || Validation.get('IsEmpty').test(dependentElements[0].value)
                 || normalizedTime(v) <= normalizedTime(dependentElements[0].value);
         }],
-    ['validate-email', 'Please enter a valid email address. For example johndoe@domain.com.', function (v) {
+    ['validate-email', '请输入一个有效的电子邮件地址。例如,johndoe@domain.com。', function (v) {
                 //return Validation.get('IsEmpty').test(v) || /\w{1,}[@][\w\-]{1,}([.]([\w\-]{1,})){1,3}$/.test(v)
                 //return Validation.get('IsEmpty').test(v) || /^[\!\#$%\*/?|\^\{\}`~&\'\+\-=_a-z0-9][\!\#$%\*/?|\^\{\}`~&\'\+\-=_a-z0-9\.]{1,30}[\!\#$%\*/?|\^\{\}`~&\'\+\-=_a-z0-9]@([a-z0-9_-]{1,30}\.){1,5}[a-z]{2,4}$/i.test(v)
                 return Validation.get('IsEmpty').test(v) || /^([a-z0-9,!\#\$%&'\*\+\/=\?\^_`\{\|\}~-]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])+(\.([a-z0-9,!\#\$%&'\*\+\/=\?\^_`\{\|\}~-]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])+)*@([a-z0-9-]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])+(\.([a-z0-9-]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])+)*\.(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]){2,})$/i.test(v)
             }],
-    ['validate-emailSender', 'Please use only visible characters and spaces.', function (v) {
+    ['validate-emailSender', '请只使用可见字符和空格。', function (v) {
                 return Validation.get('IsEmpty').test(v) ||  /^[\S ]+$/.test(v)
                     }],
-    ['validate-password', 'Please enter 6 or more characters. Leading or trailing spaces will be ignored.', function(v) {
+    ['validate-password', '请输入6个或更多字符。前导或尾随空格将被忽略。', function(v) {
                 var pass=v.strip(); /*strip leading and trailing spaces*/
                 return !(pass.length>0 && pass.length < 6);
             }],
-    ['validate-admin-password', 'Please enter 7 or more characters. Password should contain both numeric and alphabetic characters.', function(v) {
+    ['validate-admin-password', '请输入7个或更多字符。密码应该包含数字和字母的字符。', function(v) {
                 var pass=v.strip();
                 if (0 == pass.length) {
                     return true;
@@ -545,7 +545,7 @@ Validation.addAllThese([
                 }
                 return !(pass.length < 7);
             }],
-    ['validate-cpassword', 'Please make sure your passwords match.', function(v) {
+    ['validate-cpassword', '两次输入密码不一致。', function(v) {
                 var conf = $('confirmation') ? $('confirmation') : $$('.validate-cpassword')[0];
                 var pass = false;
                 if ($('password')) {
@@ -563,7 +563,7 @@ Validation.addAllThese([
                 }
                 return (pass.value == conf.value);
             }],
-    ['validate-both-passwords', 'Please make sure your passwords match.', function(v, input) {
+    ['validate-both-passwords', '两次密码不相同。', function(v, input) {
                 var dependentInput = $(input.form[input.name == 'password' ? 'confirmation' : 'password']),
                     isEqualValues  = input.value == dependentInput.value;
 
