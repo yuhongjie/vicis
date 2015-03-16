@@ -1767,7 +1767,7 @@ input#search {
 .page-print .cart-price, .page-print .price-excl-tax .label, .page-print .price-incl-tax .label, .page-print .price-excl-tax .price, .page-print .price-incl-tax .price { display:inline; }
 .block-viewed .block-content ol li p.product-name { margin:0; }
 .block-account { margin:25px 0; }
-.block-account .block-content ul li { line-height:28px; }
+.block-account .block-content ul li { line-height:28px;padding-left: 20px; }
 .block-account .block-content ul li a {
   font-size:100%;
   font-weight:300;
@@ -4532,7 +4532,7 @@ p.category-image img { max-width:100%; }
   padding:2px 12px;
   position:relative;
   text-transform:uppercase;
-  background-color:#414141;
+  background-color:#e67a92;
 }
 .dashboard .welcome-msg, .dashboard .welcome-msg p {
   margin:0;
