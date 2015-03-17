@@ -32,7 +32,7 @@ button.button:hover span span, a.btn-readmore:hover { color:#ffffff; }
   background-color:#e17698;
   color:#ffffff;
 }
-.old-price .price, .category-products .item .price-box .price, .category-products #products-list .price-box .special-price .price, .category-products #products-list .price-box .regular-price .price, .product-view .product-shop .price-box .regular-price .price, .product-view .product-shop .price-box .special-price { color:#000000; }
+.old-price .price, .category-products .item .price-box .price, .category-products #products-list .price-box .special-price .price, .category-products #products-list .price-box .regular-price .price, .product-view .product-shop .price-box .regular-price .price, .product-view .product-shop .price-box .special-price { color:#8a7f7f; }
 body { font-family:Montserrat, arial, serif; }
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 { font-family:Montserrat, arial, serif; }
 .header-container .header .header-act { background-color:rgba(0,0,0,0); }
