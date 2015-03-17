@@ -92,7 +92,7 @@
 .opc-wrapper-opc .opc-col-left .wide{width:100%}
 .opc-wrapper-opc .opc-col-left .wide .input-box {width:100%;padding:0}
 .opc-wrapper-opc .opc-col-left .wide input[type="text"]{border:1px solid #d8d8d8; height:22px;padding:0;width:100%;padding-left:5px;}
-.opc-wrapper-opc .opc-col-left .fields .field{ clear: none;float: left;width: 46%;}
+.opc-wrapper-opc .opc-col-left .fields .field{ clear: none;float: left;width: 100%;}
 .opc-wrapper-opc .opc-col-left .fields .field:first-child{margin-right:21px;}
 .opc-wrapper-opc .opc-col-left .fields .input-box{width:100%;}
 .opc-wrapper-opc .opc-col-left .fields input[type="text"],
