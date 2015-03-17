@@ -42,7 +42,7 @@
     }
 
     .header .header-right-inner {
-        top: 0;
+        top: -70px;
         position: relative;
     }
 
@@ -94,6 +94,24 @@
         float: left;
         padding: 35px 0 0 170px;
     }
+
+    .mt-main-menu {
+    width: 940px;
+    background: rgba(118,114,106,0.3);
+    top: 152px;
+    padding: 0;
+    float: left;
+    position: relative;
+    left: -176px;
+    z-index: 1000;
+    }
+    #mtnav li {
+    width: 184px;
+    float: left;
+    padding: 0;
+    text-align: left;
+    }
+
 }
 
 /* Design for a width of 960-1024 px
@@ -105,8 +123,14 @@
 
 }
 
-@media (min-width: 768px) and (max-width: 991px) {
-
+@media (min-width: 965px) and (max-width: 991px) {
+    .mt-main-menu {
+    width: 719px;
+    left: -139px;
+    }
+    #mtnav li {
+    width: 138px;
+    }
 }
 @media (max-width: 991px) {
     #cboxOverlay, #colorbox {
@@ -159,7 +183,7 @@
         position: relative;
     }
     .header .header-right-inner{
-        top: 60px;
+        top: 27px;
         display: inline-block;
         position: absolute;
         text-align: center;
@@ -190,6 +214,20 @@
     {
         top: 60px;
     }
+    .mt-main-menu {
+    width: 719px;
+    background: rgba(118,114,106,0.3);
+    top: 152px;
+    padding: 0;
+    float: left;
+    position: relative;
+    left: -139px;
+    z-index: 1000;
+    }
+    #mtnav li {
+    width: 137px;
+    }
+
 }
 
 
