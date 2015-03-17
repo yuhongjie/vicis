@@ -100,7 +100,7 @@
 }
 .bs-07-tab-category ul.products-grid li .col-right{
     float: right;
-    margin: 0 4% 0 0;
+    margin: 15px 0px 0 10px;
 }
 .rtl .toolbar p.mt-toolbar-label,.rtl .toolbar .toolbar-top .sort-by .sbHolder,.rtl .toolbar p{
     float: left;
