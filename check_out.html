@@ -27,6 +27,9 @@
               
             </script>
           <![endif]-->
+          <!-- date -->
+          <link rel="stylesheet" type="text/css" href="js/c/bootstrap-datepicker.css" />
+          <link rel="stylesheet" type="text/css" href="js/c/jquery.ptTimeSelect.css" />
           <link rel="stylesheet" type="text/css" href="css/home.css" />
           <link rel="stylesheet" type="text/css" href="css/owl.carousel.css" />
           <link rel="stylesheet" type="text/css" href="css/owl.theme.css" />
@@ -67,6 +70,7 @@
           />
           <link rel="stylesheet" type="text/css" href="css/print.css" media="print"
           />
+          <!-- date -->
           <script type="text/javascript" src="js/prototype.js">
           </script>
           <script type="text/javascript" src="js/ccard.js">
@@ -93,8 +97,12 @@
           </script>
           <script type="text/javascript" src="js/cookies.js">
           </script>
-          <script type="text/javascript" src="js/jquery-1.8.2.min.js">
-          </script>
+          <script type="text/javascript" src="js/jquery-1.8.3.min.js">
+           </script>
+         <!-- date -->
+          <script src="js/c/jquery.timepicker.js"></script>
+          <script src="js/c/bootstrap-datepicker.js"></script>
+          <!-- date end  -->
           <script type="text/javascript" src="js/wow.min.js">
           </script>
           <script type="text/javascript" src="js/bootstrap.min.js">
@@ -699,7 +707,7 @@
                                     </div>
                                   </li>
                                   <li class="control">
-                                    <a href="#" for="billing:save_in_address_book">
+                                    <a href="user_address_show.html" for="billing:save_in_address_book">
                                       修改
                                     </a>
                                   </li>
@@ -709,1096 +717,64 @@
                           </ul>
                         </div>
                       </div>
-                      <form id="opc-address-form-shipping" class="hidden" method="post">
-                        <div>
-                          <h3>
-                            Shipping Address
-                          </h3>
-                          <ul class="form-list">
-                            <li class="wide">
-                              <label for="shipping-address-select" class="notice">
-                                Select a shipping address from your address book or enter a new address.
-                              </label>
-                              <div class="input-box">
-                                <select name="shipping_address_id" id="shipping-address-select" class="address-select"
-                                title="" onchange="shipping.newAddress(!this.value)">
-                                  <option value="1" selected="selected">
-                                    yu hongjie, 奥利匹克公园 朝阳区, 北京市, Delaware 065500, United States
-                                  </option>
-                                  <option value="">
-                                    New Address
-                                  </option>
-                                </select>
-                              </div>
-                            </li>
-                            <li id="shipping-new-address-form" style="display:none;">
-                              <fieldset>
-                                <input type="hidden" name="shipping[address_id]" value="168" id="shipping:address_id"
-                                />
-                                <ul>
-                                  <li class="fields">
-                                    <div class="customer-name">
-                                      <div class="field name-firstname">
-                                        <label for="shipping:firstname" class="required">
-                                          <em>
-                                            *
-                                          </em>
-                                          First Name
-                                        </label>
-                                        <div class="input-box">
-                                          <input type="text" id="shipping:firstname" name="shipping[firstname]"
-                                          value="yu" title="First Name" maxlength="255" class="input-text required-entry"
-                                          />
-                                        </div>
-                                      </div>
-                                      <div class="field name-lastname">
-                                        <label for="shipping:lastname" class="required">
-                                          <em>
-                                            *
-                                          </em>
-                                          Last Name
-                                        </label>
-                                        <div class="input-box">
-                                          <input type="text" id="shipping:lastname" name="shipping[lastname]" value="hongjie"
-                                          title="Last Name" maxlength="255" class="input-text required-entry" />
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </li>
-                                  <li class="fields">
-                                    <div class="fields">
-                                      <label for="shipping:company">
-                                        Company
-                                      </label>
-                                      <div class="input-box">
-                                        <input type="text" id="shipping:company" name="shipping[company]" value="mointe"
-                                        title="Company" class="input-text " />
-                                      </div>
-                                    </div>
-                                  </li>
-                                  <li class="wide">
-                                    <label for="shipping:street1" class="required">
-                                      <em>
-                                        *
-                                      </em>
-                                      Address
-                                    </label>
-                                    <div class="input-box">
-                                      <input type="text" title="Street Address" name="shipping[street][]" id="shipping:street1"
-                                      value="奥利匹克公园" class="input-text  required-entry" />
-                                    </div>
-                                  </li>
-                                  <li class="wide">
-                                    <div class="input-box">
-                                      <input type="text" title="Street Address 2" name="shipping[street][]"
-                                      id="shipping:street2" value="朝阳区" class="input-text " />
-                                    </div>
-                                  </li>
-                                  <li class="fields">
-                                    <div class="field">
-                                      <label for="shipping:city" class="required">
-                                        <em>
-                                          *
-                                        </em>
-                                        City
-                                      </label>
-                                      <div class="input-box">
-                                        <input type="text" title="City" name="shipping[city]" value="北京市" class="input-text  required-entry"
-                                        id="shipping:city" />
-                                      </div>
-                                    </div>
-                                    <div class="field">
-                                      <label for="shipping:region" class="required">
-                                        <em>
-                                          *
-                                        </em>
-                                        State/Province
-                                      </label>
-                                      <div class="input-box">
-                                        <select id="shipping:region_id" name="shipping[region_id]" title="State/Province"
-                                        class="validate-select" style="display:none;">
-                                          <option value="">
-                                            Please select region, state or province
-                                          </option>
-                                        </select>
-                                        <script type="text/javascript">
-                                          //<![CDATA[
-                                          $('shipping:region_id').setAttribute('defaultValue', "15");
-                                          //]]>
-                                          
-                                        </script>
-                                        <input type="text" id="shipping:region" name="shipping[region]" value="Delaware"
-                                        title="State/Province" class="input-text " style="display:none;" />
-                                      </div>
-                                    </div>
-                                  </li>
-                                  <li class="fields">
-                                    <div class="field">
-                                      <label for="shipping:postcode" class="required">
-                                        <em>
-                                          *
-                                        </em>
-                                        Zip/Postal Code
-                                      </label>
-                                      <div class="input-box">
-                                        <input type="text" title="Zip/Postal Code" name="shipping[postcode]" id="shipping:postcode"
-                                        value="065500" class="input-text validate-zip-international  required-entry"
-                                        />
-                                      </div>
-                                    </div>
-                                    <div class="field">
-                                      <label for="shipping:country_id" class="required">
-                                        <em>
-                                          *
-                                        </em>
-                                        Country
-                                      </label>
-                                      <div class="input-box">
-                                        <select name="shipping[country_id]" id="shipping:country_id" class="validate-select"
-                                        title="Country" onchange="if(window.shipping)shipping.setSameAsBilling(false);">
-                                          <option value="">
-                                          </option>
-                                          <option value="AF">
-                                            Afghanistan
-                                          </option>
-                                          <option value="AX">
-                                            Åland Islands
-                                          </option>
-                                          <option value="AL">
-                                            Albania
-                                          </option>
-                                          <option value="DZ">
-                                            Algeria
-                                          </option>
-                                          <option value="AS">
-                                            American Samoa
-                                          </option>
-                                          <option value="AD">
-                                            Andorra
-                                          </option>
-                                          <option value="AO">
-                                            Angola
-                                          </option>
-                                          <option value="AI">
-                                            Anguilla
-                                          </option>
-                                          <option value="AQ">
-                                            Antarctica
-                                          </option>
-                                          <option value="AG">
-                                            Antigua and Barbuda
-                                          </option>
-                                          <option value="AR">
-                                            Argentina
-                                          </option>
-                                          <option value="AM">
-                                            Armenia
-                                          </option>
-                                          <option value="AW">
-                                            Aruba
-                                          </option>
-                                          <option value="AU">
-                                            Australia
-                                          </option>
-                                          <option value="AT">
-                                            Austria
-                                          </option>
-                                          <option value="AZ">
-                                            Azerbaijan
-                                          </option>
-                                          <option value="BS">
-                                            Bahamas
-                                          </option>
-                                          <option value="BH">
-                                            Bahrain
-                                          </option>
-                                          <option value="BD">
-                                            Bangladesh
-                                          </option>
-                                          <option value="BB">
-                                            Barbados
-                                          </option>
-                                          <option value="BY">
-                                            Belarus
-                                          </option>
-                                          <option value="BE">
-                                            Belgium
-                                          </option>
-                                          <option value="BZ">
-                                            Belize
-                                          </option>
-                                          <option value="BJ">
-                                            Benin
-                                          </option>
-                                          <option value="BM">
-                                            Bermuda
-                                          </option>
-                                          <option value="BT">
-                                            Bhutan
-                                          </option>
-                                          <option value="BO">
-                                            Bolivia
-                                          </option>
-                                          <option value="BA">
-                                            Bosnia and Herzegovina
-                                          </option>
-                                          <option value="BW">
-                                            Botswana
-                                          </option>
-                                          <option value="BV">
-                                            Bouvet Island
-                                          </option>
-                                          <option value="BR">
-                                            Brazil
-                                          </option>
-                                          <option value="IO">
-                                            British Indian Ocean Territory
-                                          </option>
-                                          <option value="VG">
-                                            British Virgin Islands
-                                          </option>
-                                          <option value="BN">
-                                            Brunei
-                                          </option>
-                                          <option value="BG">
-                                            Bulgaria
-                                          </option>
-                                          <option value="BF">
-                                            Burkina Faso
-                                          </option>
-                                          <option value="BI">
-                                            Burundi
-                                          </option>
-                                          <option value="KH">
-                                            Cambodia
-                                          </option>
-                                          <option value="CM">
-                                            Cameroon
-                                          </option>
-                                          <option value="CA">
-                                            Canada
-                                          </option>
-                                          <option value="CV">
-                                            Cape Verde
-                                          </option>
-                                          <option value="KY">
-                                            Cayman Islands
-                                          </option>
-                                          <option value="CF">
-                                            Central African Republic
-                                          </option>
-                                          <option value="TD">
-                                            Chad
-                                          </option>
-                                          <option value="CL">
-                                            Chile
-                                          </option>
-                                          <option value="CN">
-                                            China
-                                          </option>
-                                          <option value="CX">
-                                            Christmas Island
-                                          </option>
-                                          <option value="CC">
-                                            Cocos [Keeling] Islands
-                                          </option>
-                                          <option value="CO">
-                                            Colombia
-                                          </option>
-                                          <option value="KM">
-                                            Comoros
-                                          </option>
-                                          <option value="CG">
-                                            Congo - Brazzaville
-                                          </option>
-                                          <option value="CD">
-                                            Congo - Kinshasa
-                                          </option>
-                                          <option value="CK">
-                                            Cook Islands
-                                          </option>
-                                          <option value="CR">
-                                            Costa Rica
-                                          </option>
-                                          <option value="CI">
-                                            Côte d’Ivoire
-                                          </option>
-                                          <option value="HR">
-                                            Croatia
-                                          </option>
-                                          <option value="CU">
-                                            Cuba
-                                          </option>
-                                          <option value="CY">
-                                            Cyprus
-                                          </option>
-                                          <option value="CZ">
-                                            Czech Republic
-                                          </option>
-                                          <option value="DK">
-                                            Denmark
-                                          </option>
-                                          <option value="DJ">
-                                            Djibouti
-                                          </option>
-                                          <option value="DM">
-                                            Dominica
-                                          </option>
-                                          <option value="DO">
-                                            Dominican Republic
-                                          </option>
-                                          <option value="EC">
-                                            Ecuador
-                                          </option>
-                                          <option value="EG">
-                                            Egypt
-                                          </option>
-                                          <option value="SV">
-                                            El Salvador
-                                          </option>
-                                          <option value="GQ">
-                                            Equatorial Guinea
-                                          </option>
-                                          <option value="ER">
-                                            Eritrea
-                                          </option>
-                                          <option value="EE">
-                                            Estonia
-                                          </option>
-                                          <option value="ET">
-                                            Ethiopia
-                                          </option>
-                                          <option value="FK">
-                                            Falkland Islands
-                                          </option>
-                                          <option value="FO">
-                                            Faroe Islands
-                                          </option>
-                                          <option value="FJ">
-                                            Fiji
-                                          </option>
-                                          <option value="FI">
-                                            Finland
-                                          </option>
-                                          <option value="FR">
-                                            France
-                                          </option>
-                                          <option value="GF">
-                                            French Guiana
-                                          </option>
-                                          <option value="PF">
-                                            French Polynesia
-                                          </option>
-                                          <option value="TF">
-                                            French Southern Territories
-                                          </option>
-                                          <option value="GA">
-                                            Gabon
-                                          </option>
-                                          <option value="GM">
-                                            Gambia
-                                          </option>
-                                          <option value="GE">
-                                            Georgia
-                                          </option>
-                                          <option value="DE">
-                                            Germany
-                                          </option>
-                                          <option value="GH">
-                                            Ghana
-                                          </option>
-                                          <option value="GI">
-                                            Gibraltar
-                                          </option>
-                                          <option value="GR">
-                                            Greece
-                                          </option>
-                                          <option value="GL">
-                                            Greenland
-                                          </option>
-                                          <option value="GD">
-                                            Grenada
-                                          </option>
-                                          <option value="GP">
-                                            Guadeloupe
-                                          </option>
-                                          <option value="GU">
-                                            Guam
-                                          </option>
-                                          <option value="GT">
-                                            Guatemala
-                                          </option>
-                                          <option value="GG">
-                                            Guernsey
-                                          </option>
-                                          <option value="GN">
-                                            Guinea
-                                          </option>
-                                          <option value="GW">
-                                            Guinea-Bissau
-                                          </option>
-                                          <option value="GY">
-                                            Guyana
-                                          </option>
-                                          <option value="HT">
-                                            Haiti
-                                          </option>
-                                          <option value="HM">
-                                            Heard Island and McDonald Islands
-                                          </option>
-                                          <option value="HN">
-                                            Honduras
-                                          </option>
-                                          <option value="HK">
-                                            Hong Kong SAR China
-                                          </option>
-                                          <option value="HU">
-                                            Hungary
-                                          </option>
-                                          <option value="IS">
-                                            Iceland
-                                          </option>
-                                          <option value="IN">
-                                            India
-                                          </option>
-                                          <option value="ID">
-                                            Indonesia
-                                          </option>
-                                          <option value="IR">
-                                            Iran
-                                          </option>
-                                          <option value="IQ">
-                                            Iraq
-                                          </option>
-                                          <option value="IE">
-                                            Ireland
-                                          </option>
-                                          <option value="IM">
-                                            Isle of Man
-                                          </option>
-                                          <option value="IL">
-                                            Israel
-                                          </option>
-                                          <option value="IT">
-                                            Italy
-                                          </option>
-                                          <option value="JM">
-                                            Jamaica
-                                          </option>
-                                          <option value="JP">
-                                            Japan
-                                          </option>
-                                          <option value="JE">
-                                            Jersey
-                                          </option>
-                                          <option value="JO">
-                                            Jordan
-                                          </option>
-                                          <option value="KZ">
-                                            Kazakhstan
-                                          </option>
-                                          <option value="KE">
-                                            Kenya
-                                          </option>
-                                          <option value="KI">
-                                            Kiribati
-                                          </option>
-                                          <option value="KW">
-                                            Kuwait
-                                          </option>
-                                          <option value="KG">
-                                            Kyrgyzstan
-                                          </option>
-                                          <option value="LA">
-                                            Laos
-                                          </option>
-                                          <option value="LV">
-                                            Latvia
-                                          </option>
-                                          <option value="LB">
-                                            Lebanon
-                                          </option>
-                                          <option value="LS">
-                                            Lesotho
-                                          </option>
-                                          <option value="LR">
-                                            Liberia
-                                          </option>
-                                          <option value="LY">
-                                            Libya
-                                          </option>
-                                          <option value="LI">
-                                            Liechtenstein
-                                          </option>
-                                          <option value="LT">
-                                            Lithuania
-                                          </option>
-                                          <option value="LU">
-                                            Luxembourg
-                                          </option>
-                                          <option value="MO">
-                                            Macau SAR China
-                                          </option>
-                                          <option value="MK">
-                                            Macedonia
-                                          </option>
-                                          <option value="MG">
-                                            Madagascar
-                                          </option>
-                                          <option value="MW">
-                                            Malawi
-                                          </option>
-                                          <option value="MY">
-                                            Malaysia
-                                          </option>
-                                          <option value="MV">
-                                            Maldives
-                                          </option>
-                                          <option value="ML">
-                                            Mali
-                                          </option>
-                                          <option value="MT">
-                                            Malta
-                                          </option>
-                                          <option value="MH">
-                                            Marshall Islands
-                                          </option>
-                                          <option value="MQ">
-                                            Martinique
-                                          </option>
-                                          <option value="MR">
-                                            Mauritania
-                                          </option>
-                                          <option value="MU">
-                                            Mauritius
-                                          </option>
-                                          <option value="YT">
-                                            Mayotte
-                                          </option>
-                                          <option value="MX">
-                                            Mexico
-                                          </option>
-                                          <option value="FM">
-                                            Micronesia
-                                          </option>
-                                          <option value="MD">
-                                            Moldova
-                                          </option>
-                                          <option value="MC">
-                                            Monaco
-                                          </option>
-                                          <option value="MN">
-                                            Mongolia
-                                          </option>
-                                          <option value="ME">
-                                            Montenegro
-                                          </option>
-                                          <option value="MS">
-                                            Montserrat
-                                          </option>
-                                          <option value="MA">
-                                            Morocco
-                                          </option>
-                                          <option value="MZ">
-                                            Mozambique
-                                          </option>
-                                          <option value="MM">
-                                            Myanmar [Burma]
-                                          </option>
-                                          <option value="NA">
-                                            Namibia
-                                          </option>
-                                          <option value="NR">
-                                            Nauru
-                                          </option>
-                                          <option value="NP">
-                                            Nepal
-                                          </option>
-                                          <option value="NL">
-                                            Netherlands
-                                          </option>
-                                          <option value="AN">
-                                            Netherlands Antilles
-                                          </option>
-                                          <option value="NC">
-                                            New Caledonia
-                                          </option>
-                                          <option value="NZ">
-                                            New Zealand
-                                          </option>
-                                          <option value="NI">
-                                            Nicaragua
-                                          </option>
-                                          <option value="NE">
-                                            Niger
-                                          </option>
-                                          <option value="NG">
-                                            Nigeria
-                                          </option>
-                                          <option value="NU">
-                                            Niue
-                                          </option>
-                                          <option value="NF">
-                                            Norfolk Island
-                                          </option>
-                                          <option value="MP">
-                                            Northern Mariana Islands
-                                          </option>
-                                          <option value="KP">
-                                            North Korea
-                                          </option>
-                                          <option value="NO">
-                                            Norway
-                                          </option>
-                                          <option value="OM">
-                                            Oman
-                                          </option>
-                                          <option value="PK">
-                                            Pakistan
-                                          </option>
-                                          <option value="PW">
-                                            Palau
-                                          </option>
-                                          <option value="PS">
-                                            Palestinian Territories
-                                          </option>
-                                          <option value="PA">
-                                            Panama
-                                          </option>
-                                          <option value="PG">
-                                            Papua New Guinea
-                                          </option>
-                                          <option value="PY">
-                                            Paraguay
-                                          </option>
-                                          <option value="PE">
-                                            Peru
-                                          </option>
-                                          <option value="PH">
-                                            Philippines
-                                          </option>
-                                          <option value="PN">
-                                            Pitcairn Islands
-                                          </option>
-                                          <option value="PL">
-                                            Poland
-                                          </option>
-                                          <option value="PT">
-                                            Portugal
-                                          </option>
-                                          <option value="PR">
-                                            Puerto Rico
-                                          </option>
-                                          <option value="QA">
-                                            Qatar
-                                          </option>
-                                          <option value="RE">
-                                            Réunion
-                                          </option>
-                                          <option value="RO">
-                                            Romania
-                                          </option>
-                                          <option value="RU">
-                                            Russia
-                                          </option>
-                                          <option value="RW">
-                                            Rwanda
-                                          </option>
-                                          <option value="BL">
-                                            Saint Barthélemy
-                                          </option>
-                                          <option value="SH">
-                                            Saint Helena
-                                          </option>
-                                          <option value="KN">
-                                            Saint Kitts and Nevis
-                                          </option>
-                                          <option value="LC">
-                                            Saint Lucia
-                                          </option>
-                                          <option value="MF">
-                                            Saint Martin
-                                          </option>
-                                          <option value="PM">
-                                            Saint Pierre and Miquelon
-                                          </option>
-                                          <option value="VC">
-                                            Saint Vincent and the Grenadines
-                                          </option>
-                                          <option value="WS">
-                                            Samoa
-                                          </option>
-                                          <option value="SM">
-                                            San Marino
-                                          </option>
-                                          <option value="ST">
-                                            São Tomé and Príncipe
-                                          </option>
-                                          <option value="SA">
-                                            Saudi Arabia
-                                          </option>
-                                          <option value="SN">
-                                            Senegal
-                                          </option>
-                                          <option value="RS">
-                                            Serbia
-                                          </option>
-                                          <option value="SC">
-                                            Seychelles
-                                          </option>
-                                          <option value="SL">
-                                            Sierra Leone
-                                          </option>
-                                          <option value="SG">
-                                            Singapore
-                                          </option>
-                                          <option value="SK">
-                                            Slovakia
-                                          </option>
-                                          <option value="SI">
-                                            Slovenia
-                                          </option>
-                                          <option value="SB">
-                                            Solomon Islands
-                                          </option>
-                                          <option value="SO">
-                                            Somalia
-                                          </option>
-                                          <option value="ZA">
-                                            South Africa
-                                          </option>
-                                          <option value="GS">
-                                            South Georgia and the South Sandwich Islands
-                                          </option>
-                                          <option value="KR">
-                                            South Korea
-                                          </option>
-                                          <option value="ES">
-                                            Spain
-                                          </option>
-                                          <option value="LK">
-                                            Sri Lanka
-                                          </option>
-                                          <option value="SD">
-                                            Sudan
-                                          </option>
-                                          <option value="SR">
-                                            Suriname
-                                          </option>
-                                          <option value="SJ">
-                                            Svalbard and Jan Mayen
-                                          </option>
-                                          <option value="SZ">
-                                            Swaziland
-                                          </option>
-                                          <option value="SE">
-                                            Sweden
-                                          </option>
-                                          <option value="CH">
-                                            Switzerland
-                                          </option>
-                                          <option value="SY">
-                                            Syria
-                                          </option>
-                                          <option value="TW">
-                                            Taiwan
-                                          </option>
-                                          <option value="TJ">
-                                            Tajikistan
-                                          </option>
-                                          <option value="TZ">
-                                            Tanzania
-                                          </option>
-                                          <option value="TH">
-                                            Thailand
-                                          </option>
-                                          <option value="TL">
-                                            Timor-Leste
-                                          </option>
-                                          <option value="TG">
-                                            Togo
-                                          </option>
-                                          <option value="TK">
-                                            Tokelau
-                                          </option>
-                                          <option value="TO">
-                                            Tonga
-                                          </option>
-                                          <option value="TT">
-                                            Trinidad and Tobago
-                                          </option>
-                                          <option value="TN">
-                                            Tunisia
-                                          </option>
-                                          <option value="TR">
-                                            Turkey
-                                          </option>
-                                          <option value="TM">
-                                            Turkmenistan
-                                          </option>
-                                          <option value="TC">
-                                            Turks and Caicos Islands
-                                          </option>
-                                          <option value="TV">
-                                            Tuvalu
-                                          </option>
-                                          <option value="UG">
-                                            Uganda
-                                          </option>
-                                          <option value="UA">
-                                            Ukraine
-                                          </option>
-                                          <option value="AE">
-                                            United Arab Emirates
-                                          </option>
-                                          <option value="GB">
-                                            United Kingdom
-                                          </option>
-                                          <option value="US" selected="selected">
-                                            United States
-                                          </option>
-                                          <option value="UY">
-                                            Uruguay
-                                          </option>
-                                          <option value="UM">
-                                            U.S. Minor Outlying Islands
-                                          </option>
-                                          <option value="VI">
-                                            U.S. Virgin Islands
-                                          </option>
-                                          <option value="UZ">
-                                            Uzbekistan
-                                          </option>
-                                          <option value="VU">
-                                            Vanuatu
-                                          </option>
-                                          <option value="VA">
-                                            Vatican City
-                                          </option>
-                                          <option value="VE">
-                                            Venezuela
-                                          </option>
-                                          <option value="VN">
-                                            Vietnam
-                                          </option>
-                                          <option value="WF">
-                                            Wallis and Futuna
-                                          </option>
-                                          <option value="EH">
-                                            Western Sahara
-                                          </option>
-                                          <option value="YE">
-                                            Yemen
-                                          </option>
-                                          <option value="ZM">
-                                            Zambia
-                                          </option>
-                                          <option value="ZW">
-                                            Zimbabwe
-                                          </option>
-                                        </select>
-                                      </div>
-                                    </div>
-                                  </li>
-                                  <li class="fields">
-                                    <div class="field">
-                                      <label for="shipping:telephone" class="required">
-                                        <em>
-                                          *
-                                        </em>
-                                        Telephone
-                                      </label>
-                                      <div class="input-box">
-                                        <input type="text" name="shipping[telephone]" value="13303360636" title="Telephone"
-                                        class="input-text  required-entry" id="shipping:telephone" />
-                                      </div>
-                                    </div>
-                                    <div class="field">
-                                      <label for="shipping:fax">
-                                        Fax
-                                      </label>
-                                      <div class="input-box">
-                                        <input type="text" name="shipping[fax]" value="065500" title="Fax" class="input-text "
-                                        id="shipping:fax" />
-                                      </div>
-                                    </div>
-                                  </li>
-                                  <li class="control">
-                                    <input type="checkbox" name="shipping[save_in_address_book]" value="1"
-                                    title="Save in address book" id="shipping:save_in_address_book" class="checkbox"
-                                    />
-                                    <label for="shipping:save_in_address_book">
-                                      Save in address book
-                                    </label>
-                                  </li>
-                                </ul>
-                              </fieldset>
-                            </li>
-                            <li class="control hidden">
-                              <input type="checkbox" name="shipping[same_as_billing]" id="shipping:same_as_billing"
-                              value="1" checked="checked" title="Use Billing Address" class="checkbox"
-                              />
-                              <label for="shipping:same_as_billing">
-                                Use Billing Address
-                              </label>
-                            </li>
-                          </ul>
-                        </div>
-                      </form>
                     </div>
                     <div class="opc-col-center">
                       <div class="shipping-block">
                         <h3>
-                          Shipping Method
+                          配送方式和时间
                         </h3>
                         <div id="shipping-block-methods">
                           <form id="opc-co-shipping-method-form" autocomplete="off">
                             <div id="checkout-shipping-method-load">
-                              <dl class="sp-methods">
-                                <dt>
-                                  Flat Rate
-                                </dt>
-                                <dd>
-                                  <ul>
-                                    <li>
-                                      <span class="no-display">
-                                        <input name="shipping_method" type="radio" value="flatrate_flatrate" id="s_method_flatrate_flatrate"
-                                        checked="checked" />
-                                      </span>
-                                      <label for="s_method_flatrate_flatrate">
-                                        Fixed
-                                        <span class="price">
-                                          $5.00
-                                        </span>
-                                      </label>
-                                    </li>
-                                  </ul>
-                                </dd>
-                              </dl>
-                              <script type="text/javascript">
-                                //<![CDATA[
-                                var shippingCodePrice = {
-                                  'flatrate_flatrate': 5
-                                };
-
-                                $$('input[type="radio"][name="shipping_method"]').each(function(el) {
-                                  Event.observe(el, 'click',
-                                  function() {
-                                    if (el.checked == true) {
-                                      var getShippingCode = el.getValue();
-                                      var newPrice = shippingCodePrice[getShippingCode];
-                                      if (!lastPrice) {
-                                        lastPrice = newPrice;
-                                        quoteBaseGrandTotal += newPrice;
-                                      }
-                                      if (newPrice != lastPrice) {
-                                        quoteBaseGrandTotal += (newPrice - lastPrice);
-                                        lastPrice = newPrice;
-                                      }
-                                      checkQuoteBaseGrandTotal = quoteBaseGrandTotal;
-                                      return false;
-                                    }
-                                  });
-                                });
-                                //]]>
-                                
-                              </script>
-                            </div>
-                            <div id="onepage-checkout-shipping-method-additional-load">
-                              <script type="text/javascript">
-                                //<![CDATA[
-                                if (!window.toogleVisibilityOnObjects) {
-                                  var toogleVisibilityOnObjects = function(source, objects) {
-                                    if ($(source) && $(source).checked) {
-                                      objects.each(function(item) {
-                                        $(item).show();
-                                        $$('#' + item + ' .input-text').each(function(item) {
-                                          item.removeClassName('validation-passed');
-                                        });
-                                      });
-                                    } else {
-                                      objects.each(function(item) {
-                                        if ($(item)) {
-                                          $(item).hide();
-                                          $$('#' + item + ' .input-text').each(function(sitem) {
-                                            sitem.addClassName('validation-passed');
-                                          });
-                                          $$('#' + item + ' .giftmessage-area').each(function(sitem) {
-                                            sitem.value = '';
-                                          });
-                                          $$('#' + item + ' .checkbox').each(function(sitem) {
-                                            sitem.checked = false;
-                                          });
-                                          $$('#' + item + ' .select').each(function(sitem) {
-                                            sitem.value = '';
-                                          });
-                                          $$('#' + item + ' .price-box').each(function(sitem) {
-                                            sitem.addClassName('no-display');
-                                          });
-                                        }
-                                      });
-                                    }
-                                  }
-                                }
-
-                                if (!window.toogleRequired) {
-                                  var toogleRequired = function(source, objects) {
-                                    if (!$(source).value.blank()) {
-                                      objects.each(function(item) {
-                                        $(item).addClassName('required-entry');
-                                      });
-                                    } else {
-                                      objects.each(function(item) {
-                                        if (typeof shippingMethod != 'undefined' && shippingMethod.validator) {
-                                          shippingMethod.validator.reset(item);
-                                        }
-                                        $(item).removeClassName('required-entry');
+                              <dt>
+                              <input id=""  type="radio" name="payment[method]"
+                              title="Check / Money order" onclick="" checked="checked"
+                              class="radio" />
+                              <label for="">
+                                自提
+                              </label>
+                            </dt>
+                            <dt>
+                              <input id="" value="" type="radio" name=""
+                              title="" onclick="" checked=""
+                              class="radio" />
+                              <label for="p_method_checkmo">
+                                送货上门
+                              </label>
+                            </dt>
+                            <dt>
+                               <label for="p_method_checkmo">
+                                送货日期
+                              </label>
+                               <article>
+                                  <div class="demo">
+                                      <p id="basicExample">
+                                          <input type="text" class="date start" />
+                                      </p>
+                                  </div>
+                                  <script>
+                                      $('#basicExample .time').timepicker({
+                                          'showDuration': true,
+                                          'timeFormat': 'g:ia'
                                       });
 
-                                    }
-                                  }
-                                }
-                                if (window.shipping) {
+                                      $('#basicExample .date').datepicker({
+                                          'format': 'm/d/yyyy',
+                                          'autoclose': true
+                                      });
 
-                                  shipping.onSave = function(evt) {
-                                    new Ajax.Updater('onepage-checkout-shipping-method-additional-load', 'http://mt-bebakery.magentheme.com/index.php/onepage/index/getAdditional/', {
-                                      onSuccess: function() {
-                                        this.nextStep(evt);
-                                      }.bind(this),
-                                      evalScripts: true
-                                    });
-                                  }.bindAsEventListener(shipping);
-
-                                  billing.onSave = function(evt) {
-                                    new Ajax.Updater('onepage-checkout-shipping-method-additional-load', 'http://mt-bebakery.magentheme.com/index.php/onepage/index/getAdditional/', {
-                                      onSuccess: function() {
-                                        this.nextStep(evt);
-                                      }.bind(this),
-                                      evalScripts: true
-                                    });
-                                  }.bindAsEventListener(billing);
-
-                                }
-                                //]]>
-                                
-                              </script>
+                                      $('#basicExample').datepair();
+                                  </script>
+                              </article>
+                            </dt>
                             </div>
                           </form>
                         </div>
                       </div>
                       <div class="payment-block ">
                         <h3>
-                          Payment Method
+                            支付方式
                         </h3>
-                        <script type="text/javascript">
-                          //<![CDATA[
-                          var quoteBaseGrandTotal = 17;
-                          var checkQuoteBaseGrandTotal = quoteBaseGrandTotal;
-                          var payment = new Payment('co-payment-form', 'http://mt-bebakery.magentheme.com/index.php/checkout/onepage/savePayment/');
-                          var lastPrice;
-                          //]]>
-                          
-                        </script>
                         <form action="" id="co-payment-form">
                           <fieldset>
                             <dt>
@@ -1806,259 +782,24 @@
                               title="Check / Money order" onclick="payment.switchMethod('checkmo')" checked="checked"
                               class="radio" />
                               <label for="p_method_checkmo">
-                                Check / Money order
+                                支付宝
                               </label>
                             </dt>
                             <dt>
-                              <input id="p_method_ccsave" value="ccsave" type="radio" name="payment[method]"
-                              title="Credit Card (saved)" onclick="payment.switchMethod('ccsave')" class="radio"
-                              />
-                              <label for="p_method_ccsave">
-                                Credit Card (saved)
+                              <input id="p_method_checkm" value="checkmo" type="radio" name="payment[method]"
+                              title="Check / Money order" onclick="payment.switchMethod('checkmo')" checked="checked"
+                              class="radio" />
+                              <label for="p_method_checkmo">
+                                货到付款
                               </label>
                             </dt>
-                            <dd>
-                              <ul class="form-list" id="payment_form_ccsave" style="display:none;">
-                                <li>
-                                  <label for="ccsave_cc_owner" class="required">
-                                    <em>
-                                      *
-                                    </em>
-                                    Name on Card
-                                  </label>
-                                  <div class="input-box">
-                                    <input type="text" title="Name on Card" class="input-text required-entry"
-                                    id="ccsave_cc_owner" name="payment[cc_owner]" value="" />
-                                  </div>
-                                </li>
-                                <li>
-                                  <label for="ccsave_cc_type" class="required">
-                                    <em>
-                                      *
-                                    </em>
-                                    Credit Card Type
-                                  </label>
-                                  <div class="input-box">
-                                    <select id="ccsave_cc_type" name="payment[cc_type]" title="Credit Card Type"
-                                    class="required-entry validate-cc-type-select">
-                                      <option value="">
-                                        --Please Select--
-                                      </option>
-                                      <option value="AE">
-                                        American Express
-                                      </option>
-                                      <option value="VI">
-                                        Visa
-                                      </option>
-                                      <option value="MC">
-                                        MasterCard
-                                      </option>
-                                      <option value="DI">
-                                        Discover
-                                      </option>
-                                    </select>
-                                  </div>
-                                </li>
-                                <li>
-                                  <label for="ccsave_cc_number" class="required">
-                                    <em>
-                                      *
-                                    </em>
-                                    Credit Card Number
-                                  </label>
-                                  <div class="input-box">
-                                    <input type="text" id="ccsave_cc_number" name="payment[cc_number]" title="Credit Card Number"
-                                    class="input-text validate-cc-number validate-cc-type" value="" />
-                                  </div>
-                                </li>
-                                <li>
-                                  <label for="ccsave_expiration" class="required">
-                                    <em>
-                                      *
-                                    </em>
-                                    Expiration Date
-                                  </label>
-                                  <div class="input-box">
-                                    <div class="v-fix">
-                                      <select id="ccsave_expiration" name="payment[cc_exp_month]" class="month validate-cc-exp required-entry">
-                                        <option value="" selected="selected">
-                                          Month
-                                        </option>
-                                        <option value="1">
-                                          01 - January
-                                        </option>
-                                        <option value="2">
-                                          02 - February
-                                        </option>
-                                        <option value="3">
-                                          03 - March
-                                        </option>
-                                        <option value="4">
-                                          04 - April
-                                        </option>
-                                        <option value="5">
-                                          05 - May
-                                        </option>
-                                        <option value="6">
-                                          06 - June
-                                        </option>
-                                        <option value="7">
-                                          07 - July
-                                        </option>
-                                        <option value="8">
-                                          08 - August
-                                        </option>
-                                        <option value="9">
-                                          09 - September
-                                        </option>
-                                        <option value="10">
-                                          10 - October
-                                        </option>
-                                        <option value="11">
-                                          11 - November
-                                        </option>
-                                        <option value="12">
-                                          12 - December
-                                        </option>
-                                      </select>
-                                    </div>
-                                    <div class="v-fix">
-                                      <select id="ccsave_expiration_yr" name="payment[cc_exp_year]" class="year required-entry">
-                                        <option value="" selected="selected">
-                                          Year
-                                        </option>
-                                        <option value="2015">
-                                          2015
-                                        </option>
-                                        <option value="2016">
-                                          2016
-                                        </option>
-                                        <option value="2017">
-                                          2017
-                                        </option>
-                                        <option value="2018">
-                                          2018
-                                        </option>
-                                        <option value="2019">
-                                          2019
-                                        </option>
-                                        <option value="2020">
-                                          2020
-                                        </option>
-                                        <option value="2021">
-                                          2021
-                                        </option>
-                                        <option value="2022">
-                                          2022
-                                        </option>
-                                        <option value="2023">
-                                          2023
-                                        </option>
-                                        <option value="2024">
-                                          2024
-                                        </option>
-                                        <option value="2025">
-                                          2025
-                                        </option>
-                                      </select>
-                                    </div>
-                                  </div>
-                                </li>
-                                <li>
-                                  <label for="ccsave_cc_cid" class="required">
-                                    <em>
-                                      *
-                                    </em>
-                                    Card Verification Number
-                                  </label>
-                                  <div class="input-box">
-                                    <div class="v-fix">
-                                      <input type="text" title="Card Verification Number" class="input-text cvv required-entry validate-cc-cvn"
-                                      id="ccsave_cc_cid" name="payment[cc_cid]" value="" />
-                                    </div>
-                                    <a href="#" class="cvv-what-is-this">
-                                      What is this?
-                                    </a>
-                                  </div>
-                                </li>
-                              </ul>
-                            </dd>
-                            <script type="text/javascript">
-                              //<![CDATA[
-                              payment.init();
-                              //]]>
-                              
-                            </script>
                           </fieldset>
-                        </form>
-                        <div class="tool-tip" id="payment-tool-tip" style="display:none;">
-                          <div class="btn-close">
-                            <a href="#" id="payment-tool-tip-close" title="Close">
-                              Close
-                            </a>
-                          </div>
-                          <div class="tool-tip-content">
-                            <img src="images/cvv.gif"
-                            alt="" title=""
-                            />
-                          </div>
-                        </div>
-                        <script type="text/javascript">
-                          //<![CDATA[
-                          function toggleToolTip(event) {
-                            if ($('payment-tool-tip')) {
-                              $('payment-tool-tip').setStyle({
-                                top: (Event.pointerY(event) - 560) + 'px' //,
-                                //left: (Event.pointerX(event)+100)+'px'
-                              }) $('payment-tool-tip').toggle();
-                            }
-                            Event.stop(event);
-                          }
-                          if ($('payment-tool-tip-close')) {
-                            Event.observe($('payment-tool-tip-close'), 'click', toggleToolTip);
-                          }
-                          //]]>
-                          
-                        </script>
-                        <script type="text/javascript">
-                          //<![CDATA[
-                          payment.currentMethod = "checkmo";
-                          //]]>
-                          
-                        </script>
-                      </div>
-                      <div class="discount-block">
-                        <h3>
-                          Discount Codes
-                        </h3>
-                        <form id="opc-discount-coupon-form" action=""
-                        method="post">
-                          <div class="discount">
-                            <div class="discount-form">
-                              <label for="coupon_code">
-                                Enter your coupon code:
-                              </label>
-                              <div class="input-box">
-                                <input class="input-text" id="coupon_code" type="text" name="coupon_code"
-                                value="" autocomplete="off" />
-                              </div>
-                              <div class="buttons-set">
-                                <button type="button" title="Apply" class="button apply-coupon" value="Apply">
-                                  <span>
-                                    <span>
-                                      Apply
-                                    </span>
-                                  </span>
-                                </button>
-                              </div>
-                            </div>
-                          </div>
                         </form>
                       </div>
                     </div>
                     <div class="opc-col-right">
                       <h3>
-                        Review Your Order
+                        商品信息
                       </h3>
                       <div id="opc-review-block">
                         <div id="checkout-review-table-wrapper">
@@ -2070,50 +811,40 @@
                             <thead>
                               <tr>
                                 <th rowspan="1">
-                                  Product Name
+                                  商品名称
                                 </th>
                                 <th colspan="1" class="a-center">
-                                  Price
+                                  价格
                                 </th>
                                 <th rowspan="1" class="a-center">
-                                  Qty
+                                  数量
                                 </th>
                                 <th colspan="1" class="a-center">
-                                  Subtotal
+                                  小计
                                 </th>
                               </tr>
                             </thead>
                             <tfoot>
                               <tr>
                                 <td style="" class="a-right" colspan="3">
-                                  Subtotal
+                                  小计
                                 </td>
                                 <td style="" class="a-right">
                                   <span class="price">
-                                    $12.00
-                                  </span>
-                                </td>
-                              </tr>
-                              <tr>
-                                <td style="" class="a-right" colspan="3">
-                                  Shipping &amp; Handling (Flat Rate - Fixed)
-                                </td>
-                                <td style="" class="a-right">
-                                  <span class="price">
-                                    $5.00
+                                    ￥12.00
                                   </span>
                                 </td>
                               </tr>
                               <tr>
                                 <td style="" class="a-right" colspan="3">
                                   <strong>
-                                    Grand Total
+                                    总计
                                   </strong>
                                 </td>
                                 <td style="" class="a-right">
                                   <strong>
                                     <span class="price">
-                                      $17.00
+                                      ￥17.00
                                     </span>
                                   </strong>
                                 </td>
@@ -2123,13 +854,13 @@
                               <tr>
                                 <td>
                                   <h3 class="product-name">
-                                    Sweet Deliciousness
+                                    薇茜甜点
                                   </h3>
                                 </td>
                                 <td class="a-right">
                                   <span class="cart-price">
                                     <span class="price">
-                                      $12.00
+                                      ￥12.00
                                     </span>
                                   </span>
                                 </td>
@@ -2139,7 +870,7 @@
                                 <td class="a-right">
                                   <span class="cart-price">
                                     <span class="price">
-                                      $12.00
+                                      ￥12.00
                                     </span>
                                   </span>
                                 </td>
@@ -2147,85 +878,22 @@
                             </tbody>
                           </table>
                         </div>
-                        <script type="text/javascript">
-                          //<![CDATA[
-                          decorateTable('checkout-review-table');
-                          truncateOptions();
-                          //]]>
-                          
-                        </script>
                         <div id="checkout-review-submit">
                           <div class="buttons-set" id="review-buttons-container">
                             <button type="button" title="Place Order" class="button btn-checkout opc-btn-checkout">
                               <span>
                                 <span>
-                                  Place Order
+                                  提交订单
                                 </span>
                               </span>
                             </button>
-                            <span class="please-wait" id="review-please-wait" style="display:none;">
-                              <img src="images/opc-ajax-loader.gif"
-                              alt="Submitting order information..." title="Submitting order information..."
-                              class="v-middle" />
-                              Submitting order information...
-                            </span>
                           </div>
                         </div>
                       </div>
                     </div>
                   </div>
-                  <div class="opc-ajax-loader">
-                    <div id="floatingCirclesG">
-                      <div class="f_circleG" id="frotateG_01">
-                      </div>
-                      <div class="f_circleG" id="frotateG_02">
-                      </div>
-                      <div class="f_circleG" id="frotateG_03">
-                      </div>
-                      <div class="f_circleG" id="frotateG_04">
-                      </div>
-                      <div class="f_circleG" id="frotateG_05">
-                      </div>
-                      <div class="f_circleG" id="frotateG_06">
-                      </div>
-                      <div class="f_circleG" id="frotateG_07">
-                      </div>
-                      <div class="f_circleG" id="frotateG_08">
-                      </div>
-                    </div>
-                  </div>
-                  <div class="opc-message-wrapper">
-                    <div class="opc-messages">
-                      <a class="close-message-wrapper">
-                      </a>
-                      <div class="opc-message-container">
-                      </div>
-                      <div class="opc-messages-action">
-                        <button class="button">
-                          <span>
-                            <span>
-                              Close
-                            </span>
-                          </span>
-                        </button>
-                      </div>
-                    </div>
-                  </div>
+
                 </div>
-              </div>
-            </div>
-          </div>
-          <div class="parallax">
-            <div class="main">
-              <div class="row">
-                <div class="mt-parallax">
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="mt-bottom">
-            <div class="container">
-              <div class="row">
               </div>
             </div>
           </div>
@@ -2253,58 +921,6 @@
                                             </div>
                                         </div>
                                         <script type="text/javascript" src="js/frontend.js">
-                                        </script>
-                                        <script type="text/javascript">
-                                            new MT.Widget('widget-e7922fc64767df69c432eaf0d4b1f5e4', {
-                                                animation: {
-                                                    "enable": false,
-                                                    "animationName": null,
-                                                    "animationDelay": 300,
-                                                    "itemSelector": null,
-                                                    "engineSrc": "http:\/\/localhost:8088\/sweet\/js\/wow.js"
-                                                },
-                                                parallax: {
-                                                    "enable": false,
-                                                    "type": null,
-                                                    "overlay": null,
-                                                    "video": {
-                                                        "src": null,
-                                                        "volume": false
-                                                    },
-                                                    "image": {
-                                                        "src": null,
-                                                        "fit": null,
-                                                        "repeat": null
-                                                    },
-                                                    "file": {
-                                                        "poster": null,
-                                                        "mp4": null,
-                                                        "webm": null,
-                                                        "volume": false
-                                                    }
-                                                },
-                                                carousel: {
-                                                    "enable": false,
-                                                    "pagination": false,
-                                                    "autoPlay": false,
-                                                    "items": 4,
-                                                    "singleItem": false,
-                                                    "lazyLoad": true,
-                                                    "lazyEffect": false,
-                                                    "addClassActive": true,
-                                                    "navigation": false,
-                                                    "navigationText": [null, null],
-                                                    "transitionStyle": false,
-                                                    "engineSrc": "http:\/\/localhost:8088\/sweet\/js\/owl.carousel.js"
-                                                },
-                                                carouselConfig: null,
-                                                kenburns: {
-                                                    "enable": false,
-                                                    "images": [],
-                                                    "overlay": null,
-                                                    "engineSrc": "http:\/\/localhost:8088\/sweet\/js\/kenburns.js"
-                                                }
-                                            });
                                         </script>
                                     </div>
                                     <div class="" id="widget-a2332aacf77e91334b297efdec5a07e1">
@@ -2371,258 +987,6 @@
                         </a>
                     </div>
                 </footer>
-        <script type="text/javascript">
-          function setGridItem($) {
-            var winWidth = $(window).width();
-            var col = 3;
-            if (winWidth > 768) {
-              newcol = col;
-            }
-            if (winWidth < 768 && winWidth >= 640) {
-              newcol = 3;
-            }
-            if (winWidth >= 480 && winWidth < 640) {
-              newcol = 2;
-            }
-            if (winWidth < 480) {
-              newcol = 2;
-            }
-            $i = 0;
-            $('.show-grid > .item').each(function() {
-              $i++;
-              $(this).removeClass('first');
-              $(this).removeClass('last');
-              if (($i - 1) % newcol == 0) {
-                $(this).addClass('first');
-              } else if ($i % newcol == 0) {
-                $(this).addClass('last');
-              }
-            });
-          }
-          $mt(function($) {
-            var winWidth = $(window).width();
-            var winHeight = $(window).height();
-            var windowResize_t;
-            $(window).resize(function() {
-              var winNewWidth = $(window).width();
-              var winNewHeight = $(window).height();
-              if (winWidth != winNewWidth || winHeight != winNewHeight) {
-                clearTimeout(windowResize_t);
-                windowResize_t = setTimeout(function() {
-                  $(document).trigger("themeResize");
-                  setGridItem($);
-                },
-                200);
-              }
-              winWidth = winNewWidth;
-              winHeight = winNewHeight;
-            });
-            $('.mt-maincompare').hover(function() {
-              $(this).addClass('compare-active').find('.mtajaxcompare').stop().delay(200).slideDown();
-            },
-            function() {
-              $(this).removeClass('compare-active').find('.mtajaxcompare').stop().delay(200).slideUp();
-            });
-            $('.setting-big').hover(function() {
-              $(this).addClass('setting-bi-active').find('.mtsettingbig').stop().delay(200).slideDown();
-            },
-            function() {
-              $(this).removeClass('setting-bi-active').find('.mtsettingbig').stop().delay(200).slideUp();
-            });
-            $("#select-language").selectbox();
-            $("#select-currency").selectbox();
-            //lazyload
-            $("img.lazy").lazy({
-              effect: "fadeIn",
-              effectTime: 800,
-              threshold: 50,
-              afterLoad: function(element) {}
-            });
-            var text = $(".form-language a.sbSelector").text().toLowerCase();
-            $(".form-language a.sbSelector").css({
-              "background-image": "url('http://mt-bebakery.magentheme.com/media/wysiwyg/magenthemes/languages/" + text + ".png')",
-              "background-repeat": "no-repeat",
-              "background-position": "left center"
-            });
-
-            //Back to top
-            $(window).scroll(function() {
-              if ($(this).scrollTop() > 100) {
-                $('#back-top').fadeIn();
-              } else {
-                $('#back-top').fadeOut();
-              }
-            });
-            $('#back-top a').click(function() {
-              $('body,html').animate({
-                scrollTop: 0
-              },
-              800);
-              return false;
-            });
-
-            $('.bottom-content').click(function() {
-              $('html, body').animate({
-                scrollTop: $('.show-grid-slide').height()
-              },
-              800);
-              return false;
-            });
-
-            //Cart header
-            $('.mt-maincart').hover(function() {
-              $(this).addClass('cart-active').find('.ajaxcart').stop().delay(200).slideDown();
-            },
-            function() {
-              $(this).removeClass('cart-active').find('.ajaxcart').stop().delay(200).slideUp();
-            });
-            //Quickview
-            $('.product-quickview').live('click',
-            function() {
-              $.colorbox({
-                iframe: true,
-                href: this.href,
-                opacity: 0.5,
-                speed: 300,
-                current: '{current} / {total}',
-                close: "close",
-                innerWidth: '765px',
-                innerHeight: '650px',
-                onOpen: function() {
-                  $('#cboxLoadingGraphic').addClass('box-loading');
-                },
-                onComplete: function() {
-                  setTimeout(function() {
-                    $('#cboxLoadingGraphic').removeClass('box-loading');
-                  },
-                  1300);
-                }
-              });
-            });
-
-            $('.show-quickview').live('click',
-            function(e) {
-              if ($('.btn-cart-mobile').length == 0) {
-                $('[data-id=quickview-' + $(this).attr('data-id') + ']').trigger('click');
-              } else {
-                return window.location.href = $(this).attr('data-submit');
-              }
-            });
-          });
-          $mt(window).load(function() {
-            setGridItem($mt);
-            $mt.browserSelector();
-            if ($mt("html").hasClass("chrome")) {
-              $mt.smoothScroll();
-            }
-            if ($mt("html").hasClass("safari")) {
-              $mt.smoothScroll();
-            }
-            $mt(".mt-tooltip").tooltip();
-
-            var selectToggle = '<i class="fa fa-angle-down"></i>',
-            flextPrev = '<i class="fa fa-angle-left"></i>',
-            flextNext = '<i class="fa fa-angle-right"></i>';
-
-            $mt(".flex-direction-nav a, .more-views .more-views-prev, .more-views .more-views-next").empty();
-            $mt(".more-views").addClass("nav-wrapper-view");
-            //$mt(".sbToggle").append(selectToggle);
-            $mt(".flex-direction-nav a.flex-prev").append(flextPrev);
-            $mt(".flex-direction-nav a.flex-next").append(flextNext);
-
-            wow = new WOW({
-              boxClass: 'wow',
-              animateClass: 'animated',
-              offset: 100
-            });
-            wow.init();
-          });
-          $mt(".accordion-footer").addClass("accordion-show");
-          $mt(".accordion-footer").click(function() {
-            if ($mt(this).parent().next().is(":visible")) {
-              $mt(this).addClass("accordion-show");
-            } else {
-              $mt(this).removeClass("accordion-show");
-            }
-            $mt(this).parent().next().toggle(400);
-          });
-          //Background category header//
-          $mt(document).ready(function() {
-            var iconSearch = $mt(".quick-access").find(".mt-icon-ajax").find(".fa-search"),
-            formSearch = $mt(".quick-access").find(".form-search"),
-            headerOverlay = $mt(".header-content").find(".header-act");
-            $mt(iconSearch).click(function() {
-              if ($mt(formSearch).is(":visible")) {
-                $mt(formSearch).fadeOut(100);
-                $mt(this).removeClass("fa-arrows-alt").addClass("fa-search");
-                $mt(headerOverlay).removeClass("header-overlay");
-                $mt(this).attr("data-icon", "U");
-              } else {
-                $mt(formSearch).fadeIn(100);
-                $mt(this).removeClass("fa-search").addClass("fa-arrows-alt");
-                $mt(headerOverlay).addClass("header-overlay");
-                $mt(this).attr("data-icon", "M");
-              }
-            });
-          });
-
-          function iconFontAwesome() {
-            //add font icon awesome
-            $mt(".top-link .links li a").append("<i></i>");
-            $mt(".top-link .links li.first i").addClass("fa fa-user");
-            $mt(".top-link .links li a.top-link-cart i").addClass("fa fa-shopping-cart");
-            $mt(".top-link .links li a.top-link-wishlist i").addClass("fa fa-heart-o");
-            $mt(".top-link .links li a.top-link-checkout i").addClass("fa fa-check");
-            $mt(".top-link .links li.last i").addClass("fa fa-unlock-alt");
-          }
-        </script>
-        <script type="text/javascript">
-          (function($) {
-            $('.block-wishlist #wishlist-sidebar a').live('click',
-            function() {
-              if (confirm($(this).attr('data-confirm'))) {
-                removetowishlist($(this));
-              }
-              return false;
-            });
-            $('.block-wishlist-header #wishlist-header a.btn-remove').live('click',
-            function() {
-              if (confirm($(this).attr('data-confirm'))) {
-                removetowishlist($(this));
-              }
-              return false;
-            });
-            $('.add-to-links a.link-wishlist').live('click',
-            function() {
-              addtowishlist($(this));
-              return false;
-            });
-            if ($('.product-view').length > 0) {
-              productAddToCartForm.submitLight = function(button, url) {
-                return false;
-              }.bind(productAddToCartForm);
-            }
-            $('.add-to-links a.link-compare').live('click',
-            function() {
-              addtocompare($(this));
-              return false;
-            });
-            $('.block-compare #compare-items a, .block-top-compare a.btn-remove').live('click',
-            function() {
-              if (confirm($(this).attr('data-confirm'))) {
-                removecompare($(this));
-              }
-              return false;
-            });
-            $('.block-compare .clearall a, .block-compare .actions a, .block-top-compare .clearall a').live('click',
-            function() {
-              if (confirm($(this).attr('data-confirm'))) {
-                clearallcompare($(this));
-              }
-              return false;
-            });
-          })($mt);
-        </script>
       </section>
     </section>
   </body>
