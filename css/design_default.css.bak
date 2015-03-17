@@ -10,8 +10,6 @@ a:hover {
   color:#000000;
   text-decoration:none;
 }
-button.button, a.btn-readmore, .mt-ajax-checkout a { background-color:#e67a92; }
-button.button:hover, .category-products .products-grid button.button.btn-cart:hover, a.btn-readmore:hover, .mt-ajax-checkout a:hover, .widget-static-block .custom .btn-purchase:hover { background-color:#e67a92; }
 .widget-static-block .custom .btn-purchase, a.btn-readmore-about { background-color:#fc828d; }
 button.button span, a.btn-readmore, .header-container .header a { color:#ffffff; }
 button.button:hover span span, a.btn-readmore:hover { color:#ffffff; }
@@ -32,7 +30,7 @@ button.button:hover span span, a.btn-readmore:hover { color:#ffffff; }
   background-color:#e17698;
   color:#ffffff;
 }
-.old-price .price, .category-products .item .price-box .price, .category-products #products-list .price-box .special-price .price, .category-products #products-list .price-box .regular-price .price, .product-view .product-shop .price-box .regular-price .price, .product-view .product-shop .price-box .special-price { color:#8a7f7f; }
+.old-price .price, .category-products .item .price-box .price, .category-products #products-list .price-box .special-price .price, .category-products #products-list .price-box .regular-price .price, .product-view .product-shop .price-box .regular-price .price, .product-view .product-shop .price-box .special-price { color:#000000; }
 body { font-family:Montserrat, arial, serif; }
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 { font-family:Montserrat, arial, serif; }
 .header-container .header .header-act { background-color:rgba(0,0,0,0); }
