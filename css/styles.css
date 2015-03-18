@@ -1,5 +1,5 @@
-@import url("http://fonts.googleapis.com/css?family=Montserrat:400,700");
-@import url("http://fonts.googleapis.com/css?family=Droid+Serif:400,400italic,700,700italic");
+/*@import url("http://fonts.googleapis.com/css?family=Montserrat:400,700");
+@import url("http://fonts.googleapis.com/css?family=Droid+Serif:400,400italic,700,700italic");*/
 * {
   margin:0;
   padding:0;
@@ -993,7 +993,7 @@ tr.summary-details-excluded { font-style:italic; }
   position:absolute;
   display:none;
   right:50px;
-  top:0px;
+  top:-20px;
   z-index:8999;
 }
 .header .form-search input#search {
@@ -6237,3 +6237,9 @@ span.mt-cart-title {
 }
 .widget_recent_entries ul li { list-style:none; }
 ul.nav-accordion li ul li a { color:#cccccc; }
+/*登入*/
+.login-a{
+  font-size: 16px !important;
+  color: #666 !important;
+  margin-left: 5px;
+}
