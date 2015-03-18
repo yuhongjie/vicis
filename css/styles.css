@@ -140,8 +140,11 @@ div.icon.large, span.icon.large {
   width:48.5%;
 }
 .account-login .col2-set2 {
-  float:right;
-  width:48.5%;
+  /*float:right;
+  width:48.5%;*/
+  padding-left: 31px;
+  padding-right: 30px;
+  margin-bottom: 10px;
 }
 .my-account .col2-set .col-1 {
   float:left;
