@@ -109,6 +109,10 @@
           </script>
           <script type="text/javascript" src="js/weee.js">
           </script>
+          <script type="text/javascript" src="js/lanrenzhijia.js">
+          </script>
+          <link rel="stylesheet" type="text/css" href="css/lanrenzhijia.css"
+          media="all" />
           <!--[if lt IE 8]>
             <link rel="stylesheet" type="text/css" href="css/styles-ie.css"
             media="all" />
@@ -291,7 +295,7 @@
                             </ul>
                         </li>
                         <li class="level0 nav-2 level-top">
-                            <a href="#" class="level-top">
+                            <a href="food.html" class="level-top">
                                 <span>
                                    食材
                                 </span>
@@ -500,7 +504,7 @@
                                                                             </div>
                                                                         </li>
                                                                         <li class="level0 nav-2 level-top">
-                                                                            <a href="#"
+                                                                            <a href="food.html"
                                                                             class="level-top">
                                                                                 <span>
                                                                                     食材
@@ -577,9 +581,36 @@
                                                     <a href="" class="home-header-ico">
                                                         <i class="fa fa-weibo fa-lg"></i>
                                                     </a>
-                                                    <a href="">
-                                                        <i class="fa fa-search fa-lg"></i>  
-                                                    </a>
+                                                    <div class="top-seach pull-right">
+                                                       <div class="quick-access">
+                                                         <form id="search_mini_form" action=""
+                                                         method="get">
+                                                           <div class="search-style">
+                                                             <div class="mt-icon-ajax" style="line-height: 26px;">
+                                                               <i class="fa fa-search" data-icon="U">
+                                                               </i>
+                                                             </div>
+                                                           </div>
+                                                           <div class="form-search" style="display: none;">
+                                                             <!--<label for="search"></label>-->
+                                                             <input id="search" type="text" name="q" value="" class="input-text" maxlength="128"
+                                                             autocomplete="off">
+                                                             <button type="submit" title="搜索" class="button">
+                                                               <span>
+                                                                 <span>
+                                                                   <span class="fs1" data-icon="U" aria-hidden="true">
+                                                                   </span>
+                                                                   &nbsp;
+                                                                 </span>
+                                                               </span>
+                                                             </button>
+                                                             <div id="search_autocomplete" class="search-autocomplete" style="display: none;">
+                                                             </div>
+                                                            
+                                                           </div>
+                                                         </form>
+                                                       </div>
+                                                     </div>
                                                 </div>
                                                 <div>
                                                     
@@ -591,17 +622,6 @@
                             </div>
                         </div>
                     </div>
-                    <script type="text/javascript">
-                        // $mt(window).load(function() {
-                        //     $mt("#mt-sticky-header").sticky({
-                        //         topSpacing: 0
-                        //     });
-                        //     var $logoImg = $mt('.mt-wrapper .header .logo img');
-                        //     if ($logoImg.css('min-height') == '1px') {
-                        //         $logoImg.attr('src', $logoImg.attr('src').replace('logo.png', 'logo_1.png'));
-                        //     }
-                        // });
-                    </script>
                 </header>
                 <section class="main-container col2-left-layout">
                   <div class="show-grid-slide show-slide-all">
@@ -716,11 +736,7 @@
                                         <br />
                                         地址：北京市朝阳区东坝中路奥林匹克花园
                                       </address>
-                                      <p>
-                                        <a href="user_address.html">
-                                          修改地址信息
-                                        </a>
-                                      </p>
+                                     <p><a href="user_address.html">修改地址信息</a> <span class="separator">|</span> <a href="#" class="link-remove" onclick="return deleteAddress('1');">设为默认地址</a></p>
                                     </li>
                                   </ol>
                                 </div>
@@ -1179,6 +1195,36 @@
 
       </section>
     </section>
+      <!-- 浮动购物车代码begin -->
+    <div class="fixedBox">
+      <ul class="fixedBoxList">
+        <li style="display: block;" id="cartboxs" class="fixeBoxLi cart_bd">
+          <P class="good_cart">6</P>
+          <span class="fixeBoxSpan"></span> <strong><i class="fa fa-shopping-cart"></i></strong>
+          <div class="cartBox">
+            <div class="bjfff"></div>
+            <div class="message">
+              <p>购物车内6件商品，300￥</p>
+              <a href="cart.html">去结算</a>
+          </div>
+          </div>
+        </li>
+        <li class="fixeBoxLi Service"> <span class="fixeBoxSpan"></span> <strong><i class="fa fa-qq"></i></strong>
+          <div class="ServiceBox">
+            <div class="bjfff"></div>
+            <dl >
+              <dt><img src="images/Service1.jpg"></dt>
+              <dd> <span>在线QQ客服</span>
+                <P class="p1">9:00-22:00</P>
+                <P class="p2"><a title="点击这里给我发消息"href="http://wpa.qq.com/msgrd?v=3&amp;uin=100000&amp;site=qq&amp;menu=yes"target="_blank">点击交谈</a></P>
+              </dd>
+            </dl>
+          </div>
+        </li>
+      </ul>
+    </div>
+    
+      <!-- 代码end -->
   </body>
   
   </html>

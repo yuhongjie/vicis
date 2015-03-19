@@ -4,7 +4,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>
-      购物车
+      食材
     </title>
     <meta name="description" content="Default Description" />
     <meta name="keywords" content="Magento, Varien, E-commerce" />
@@ -21,12 +21,16 @@
           <!--[if lt IE 7]>
             <script type="text/javascript">
               //<![CDATA[
-              var BLANK_URL = '#';
               var BLANK_IMG = 'images/spacer.gif';
               //]]>
               
             </script>
           <![endif]-->
+          <!-- date -->
+          <link rel="stylesheet" type="text/css" href="js/c/bootstrap-datepicker.css"
+          />
+          <link rel="stylesheet" type="text/css" href="js/c/jquery.ptTimeSelect.css"
+          />
           <link rel="stylesheet" type="text/css" href="css/home.css" />
           <link rel="stylesheet" type="text/css" href="css/owl.carousel.css" />
           <link rel="stylesheet" type="text/css" href="css/owl.theme.css" />
@@ -63,9 +67,12 @@
           />
           <link rel="stylesheet" type="text/css" href="css/layout_default.css" media="all"
           />
+          <link rel="stylesheet" type="text/css" href="css/opc.css" media="all"
+          />
           <link rel="stylesheet" type="text/css" href="css/print.css" media="print"
           />
-          <link rel="stylesheet" href="css/diy.css">
+          <link rel="stylesheet" type="text/css" href="css/lanrenzhijia.css" media="all"/>
+          <!-- date -->
           <script type="text/javascript" src="js/prototype.js">
           </script>
           <script type="text/javascript" src="js/ccard.js">
@@ -94,6 +101,12 @@
           </script>
           <script type="text/javascript" src="js/jquery-1.8.2.min.js">
           </script>
+          <!-- date -->
+          <script src="js/c/jquery.timepicker.js">
+          </script>
+          <script src="js/c/bootstrap-datepicker.js">
+          </script>
+          <!-- date end -->
           <script type="text/javascript" src="js/wow.min.js">
           </script>
           <script type="text/javascript" src="js/bootstrap.min.js">
@@ -108,7 +121,13 @@
           </script>
           <script type="text/javascript" src="js/jquery.cookie.js">
           </script>
+          <script type="text/javascript" src="js/extend.js">
+          </script>
           <script type="text/javascript" src="js/weee.js">
+          </script>
+          <script type="text/javascript" src="js/opcheckout.js">
+          </script>
+          <script type="text/javascript" src="js/lanrenzhijia.js">
           </script>
           <!--[if lt IE 8]>
             <link rel="stylesheet" type="text/css" href="css/styles-ie.css" media="all"
@@ -133,15 +152,9 @@
             />
           <![endif]-->
           <script type="text/javascript">
-            var magenThemes = {};
-            magenThemes.responsive = true;
-            magenThemes.maxBreak = 1170;
-            magenThemes.url = '#';
-          </script>
-          <script type="text/javascript">
             //<![CDATA[
-            Mage.Cookies.path = '/';
-            Mage.Cookies.domain = '.mt-bebakery.magentheme.com';
+            // Mage.Cookies.path = '/';
+            // Mage.Cookies.domain = '.mt-bebakery.magentheme.com';
             //]]>
             
           </script>
@@ -153,7 +166,7 @@
           </script>
           <script type="text/javascript">
             var MT = MT || {};
-            MT.FORM_KEY = '8a2Cziyu6JzZquBf';
+            MT.FORM_KEY = 'EdfsRPHjzB2i1pzn';
 
             function setLocationWidget(url) {
               if (url.indexOf('form_key/') !== -1) {
@@ -177,7 +190,7 @@
           </script>
   </head>
   
-  <body class="   customer-account-edit">
+  <body class="   opc-index-index">
     <section class="mt-container">
       <!-- navigation BOF -->
       <div class="mt-menu mt-effect-slide">
@@ -209,7 +222,7 @@
             <li class="level0 nav-1 level-top first parent">
               <i class="fa fa-angle-down">
               </i>
-              <a href="product_list.html" class="level-top">
+              <a href="#" class="level-top">
                 <span>
                   系列
                 </span>
@@ -248,7 +261,7 @@
             <li class="level0 nav-1 level-top first parent">
               <i class="fa fa-angle-down">
               </i>
-              <a href="product_list2.html" class="level-top">
+              <a href="#" class="level-top">
                 <span>
                   用途
                 </span>
@@ -299,7 +312,7 @@
               </a>
             </li>
             <li class="level0 nav-3 level-top">
-              <a href="faq.html" class="level-top">
+              <a href="#" class="level-top">
                 <span>
                   FAQ
                 </span>
@@ -355,8 +368,8 @@
                 </div>
                 <div class="header-content-left col-lg-2 col-md-2 col-sm-2 col-xs-12 v-grid">
                   <div class="logo">
-                    <a href="#" title="mt_bakery">
-                      <img class="img-responsive" src="images/logo.png" alt="mt_bakery" />
+                    <a href="index.html" title="薇茜甜点">
+                      <img class="img-responsive" src="images/logo.png" alt="薇茜甜点" />
                     </a>
                   </div>
                 </div>
@@ -376,10 +389,10 @@
                               </div>
                               <div class="mt-main-menu">
                                 <ul id="mtnav" class="megamenu">
-                                  <li class="level0 active nav-1 level-top first parent parent-sub">
+                                  <li class="level0  nav-1 level-top first parent parent-sub">
                                     <i class="fa fa-angle-down">
                                     </i>
-                                    <a href="product_list2.html" class="level-top">
+                                    <a href="#" class="level-top">
                                       <span>
                                         系列
                                       </span>
@@ -436,7 +449,7 @@
                                   <li class="level0 nav-1 level-top first parent parent-sub">
                                     <i class="fa fa-angle-down">
                                     </i>
-                                    <a href="product_list.html" class="level-top">
+                                    <a href="#" class="level-top">
                                       <span>
                                         用途
                                       </span>
@@ -505,14 +518,14 @@
                                     </a>
                                   </li>
                                   <li class="level0 nav-3 level-top">
-                                    <a href="faq.html" class="level-top">
+                                    <a href="#" class="level-top">
                                       <span>
                                         FAQ
                                       </span>
                                     </a>
                                   </li>
                                   <li class="level0 level-top parent custom-block  menu-item-right">
-                                    <a href="instruct.html" class="level-top">
+                                    <a href="#" class="level-top">
                                       <span>
                                         配送说明
                                       </span>
@@ -541,7 +554,7 @@
                             <div class="border-left">
                             </div>
                             <div class="mt-icon-ajaxcart">
-                              <a class="mt-cart-label home-reg" href="create_account.html">
+                              <a class="mt-cart-label home-reg" href="#">
                                 注册
                               </a>
                             </div>
@@ -555,7 +568,7 @@
                           <div id="search_mini_form" action="#" method="get">
                             <div class="search-style">
                               <div class="mt-icon-ajax">
-                               <a href="login.html">登入</a>
+                                登入
                               </div>
                             </div>
                           </div>
@@ -610,36 +623,25 @@
               </div>
             </div>
           </div>
-          <script type="text/javascript">
-            // $mt(window).load(function() {
-            //     $mt("#mt-sticky-header").sticky({
-            //         topSpacing: 0
-            //     });
-            //     var $logoImg = $mt('.mt-wrapper .header .logo img');
-            //     if ($logoImg.css('min-height') == '1px') {
-            //         $logoImg.attr('src', $logoImg.attr('src').replace('logo.png', 'logo_1.png'));
-            //     }
-            // });
-            
-          </script>
+          </div>
         </header>
-        <section class="main-container col2-left-layout">
-          <div class="show-grid-slide show-slide-all">
-            <div class="container">
-              <div class="row show-grid">
-                <div class="mt-revolution-slider col-lg-9 col-md-9 col-sm-9 col-xs-12">
-                  <div class="mt-preface">
-                  </div>
-                </div>
-                <div class="main_slide_right col-lg-3 col-md-3 col-sm-3">
-                </div>
+        <div class="clearfix">
+        </div>
+        <section class="main-container col1-layout">
+          <div class="show-grid-slide">
+            <div class="mt-revolution-slider">
+              <div class="mt-preface">
+                <a class="bottom-content" href="javascript:void(0);">
+                  <i class="fa fa-angle-down">
+                  </i>
+                </a>
               </div>
             </div>
           </div>
           <div class="">
             <div class="container">
               <div class="main_content">
-                <div class="row show-grid">
+                <div class="row">
                   <div class="col-lg-12">
                   </div>
                 </div>
@@ -649,8 +651,8 @@
           <div class="main-top">
             <div class="container">
               <div class="main">
-                <div class="row show-grid">
-                  <div class="col-lg-12">
+                <div class="row">
+                  <div class="clearfix">
                   </div>
                 </div>
               </div>
@@ -658,259 +660,30 @@
           </div>
           <div class="container-main">
             <div class="main-content container">
-              <html>
-                
-                <head>
-                </head>
-                
-                <body>
-                  <div class="row">
-                    <div class="col-md-12">
-                      <div class="col-main">
-                        <div class="cart">
-                          <div class="page-title title-buttons">
-                            <h1>
-                              购物车
-                            </h1>
+              <div class="row">
+                <div class="col-main">
+                  <div class="std">
+                    <div class="cms cms-about">
+                      <div class="container">
+                        <div class="row">
+                          <div class="one_third col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                            <img src="images/about.jpg">
                           </div>
-                          <form action="" method="post">
-                            <input name="form_key" type="hidden" value="e4VaJbI2ADGtkoLT" />
-                            <fieldset>
-                              <table id="shopping-cart-table" class="data-table cart-table">
-                                <colgroup>
-                                  <col width="1" />
-                                  <col />
-                                  <col width="1" />
-                                  <col width="1" />
-                                  <col width="1" />
-                                  <col width="1" />
-                                  <col width="1" />
-                                </colgroup>
-                                <thead>
-                                  <tr class="first last">
-                                    <th rowspan="1">
-                                      &nbsp;
-                                    </th>
-                                    <th rowspan="1">
-                                      <span class="nobr">
-                                        商品信息
-                                      </span>
-                                    </th>
-                                    <th class="a-center" colspan="1">
-                                      <span class="nobr">
-                                        单价
-                                      </span>
-                                    </th>
-                                    <th rowspan="1" class="a-center">
-                                      数量
-                                    </th>
-                                    <th class="a-center" colspan="1">
-                                      金额
-                                    </th>
-                                    <th rowspan="1" class="a-center">
-                                      &nbsp;
-                                    </th>
-                                  </tr>
-                                </thead>
-                                <tfoot>
-                                  <tr class="first last">
-                                    <td colspan="50" class="a-right last">
-                                      <button type="button" title="Continue Shopping" class="button btn-continue"
-                                      onclick="setLocation('')">
-                                        <span>
-                                          <span>
-                                            继续购物
-                                          </span>
-                                        </span>
-                                      </button>
-                                      <button type="submit" name="update_cart_action" value="update_qty" title="Update Shopping Cart"
-                                      class="button btn-update">
-                                        <span>
-                                          <span>
-                                            更新购物车
-                                          </span>
-                                        </span>
-                                      </button>
-                                      <button type="submit" name="update_cart_action" value="empty_cart" title="Clear Shopping Cart"
-                                      class="button btn-empty" id="empty_cart_button">
-                                        <span>
-                                          <span>
-                                            清空购物车
-                                          </span>
-                                        </span>
-                                      </button>
-                                    </td>
-                                  </tr>
-                                </tfoot>
-                                <tbody>
-                                  <tr class="odd">
-                                    <td>
-                                      <a href="#" title="微茜糕点" class="product-image">
-                                        <img src="images/1.jpg" width="75" height="75" alt="Part Donut" />
-                                      </a>
-                                    </td>
-                                    <td>
-                                      <h2 class="product-name">
-                                        <a href="#">
-                                          微茜糕点
-                                        </a>
-                                      </h2>
-                                    </td>
-                                    <td class="a-right">
-                                      <span class="cart-price">
-                                        <span class="price">
-                                          ￥17.00
-                                        </span>
-                                      </span>
-                                    </td>
-                                    <!-- inclusive price starts here -->
-                                    <td class="a-center">
-                                      <input name="cart[149][qty]" value="5" size="4" title="Qty" class="input-text qty"
-                                      maxlength="12" />
-                                    </td>
-                                    <!--Sub total starts here -->
-                                    <td class="a-right">
-                                      <span class="cart-price">
-                                        <span class="price">
-                                          ￥85.00
-                                        </span>
-                                      </span>
-                                    </td>
-                                    <td class="a-center last">
-                                      <a href="#" title="Remove item" class="btn-remove btn-remove2">
-                                        删除
-                                      </a>
-                                    </td>
-                                  </tr>
-                                  <tr class="odd">
-                                    <td>
-                                      <a href="#" title=" Freshly Baked " class="product-image">
-                                        <img src="images/2.jpg" width="75" height="75" alt=" Freshly Baked " />
-                                      </a>
-                                    </td>
-                                    <td>
-                                      <h2 class="product-name">
-                                        <a href="#">
-                                          微茜糕点
-                                        </a>
-                                      </h2>
-                                    </td>
-                                    <td class="a-right">
-                                      <span class="cart-price">
-                                        <span class="price">
-                                          ￥23.00
-                                        </span>
-                                      </span>
-                                    </td>
-                                    <!-- inclusive price starts here -->
-                                    <td class="a-center">
-                                      <input name="cart[151][qty]" value="1" size="4" title="Qty" class="input-text qty"
-                                      maxlength="12" />
-                                    </td>
-                                    <!--Sub total starts here -->
-                                    <td class="a-right">
-                                      <span class="cart-price">
-                                        <span class="price">
-                                          ￥23.00
-                                        </span>
-                                      </span>
-                                    </td>
-                                    <td class="a-center last">
-                                      <a href="#" title="Remove item" class="btn-remove btn-remove2">
-                                        删除
-                                      </a>
-                                    </td>
-                                  </tr>
-                                </tbody>
-                              </table>
-                              <script type="text/javascript">
-                                decorateTable('shopping-cart-table')
-                              </script>
-                            </fieldset>
-                          </form>
-                          <div class="cart-collaterals row">
-                            <div class="col-1 col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                          <div class="one_third col-lg-8 col-md-4 col-sm-4 col-xs-12">
+                            <div class="page-title">
+                              <h1>
+                                 关于薇茜甜点食材
+                              </h1>
                             </div>
-                            <div class="col-2 col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                            </div>
-                            <div class="totals col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                              <div class="totals-border">
-                                <table id="shopping-cart-totals-table">
-                                  <colgroup>
-                                    <col />
-                                    <col width="1" />
-                                  </colgroup>
-                                  <tfoot>
-                                    <tr>
-                                      <td style="" class="a-right" colspan="1">
-                                        <strong>
-                                          总计
-                                        </strong>
-                                      </td>
-                                      <td style="" class="a-right">
-                                        <strong>
-                                          <span class="price">
-                                            ￥118.00
-                                          </span>
-                                        </strong>
-                                      </td>
-                                    </tr>
-                                  </tfoot>
-                                  <!-- <tbody> 
-                                  <tr> 
-                                  <td style="" class="a-right" colspan="1"> 小计 </td> 
-                                  <td style="" class="a-right"> <span class="price">￥118.00</span> </td> 
-                                  </tr> 
-                                  </tbody>  -->
-                                </table>
-                                <ul class="checkout-types">
-                                  <li>
-                                    <button type="button" title="Proceed to Checkout" class="button btn-proceed-checkout btn-checkout"
-                                    onclick="window.location='#';">
-                                      <span>
-                                        <span>
-                                          结算中心
-                                        </span>
-                                      </span>
-                                    </button>
-                                  </li>
-                                </ul>
-                              </div>
-                            </div>
+                            <p>
+                              甜车道主要是成立于2009年为我们提供美味的和美味的食物papercrafting商店——纸巷的客户参与商店的种植会议和研讨会。但口碑传播我们的产品的美味和高度的艺术表现,客户开始成群结队地命令和请求甘美的食物——蛋糕最特别,记住自己的具体设计,因此甜巷诞生了。
+                            </p>
+                            <p>
+                              甜巷迎合阿联酋市场的大部分价值的质量方面的品味和审美情趣。我们的目标是成为迪拜领先的提供高质量的定制的蛋糕,蛋糕、饼干和其它烤美味,是著名的精致的对细节的关注,最好和最新鲜的配料使用,真正美味的味道。我们所有的蛋糕和糖果是手工艺术装饰我们的天赋的设计师和精心面包师的多年的经验在生产美味的小吃——确保你的蛋糕将会保证快乐一样。
+                            </p>
                           </div>
                         </div>
                       </div>
-                    </div>
-                  </div>
-                </body>
-              
-              </html>
-            </div>
-          </div>
-          <div class="parallax">
-            <div class="main">
-              <div class="row show-grid">
-                <div class="mt-parallax mt-parallax-cars">
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="mt-bottom">
-            <div class="container">
-              <div class="main">
-                <div class="row show-grid">
-                  <div class="col-lg-12">
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="mt-postscript">
-            <div class="container">
-              <div class="main">
-                <div class="row show-grid">
-                  <div class="col-lg-12">
-                    <div class="mt-postscript">
                     </div>
                   </div>
                 </div>
@@ -948,7 +721,7 @@
                     <script type="text/javascript" src="js/frontend.js">
                     </script>
                   </div>
-                  <div class="" >
+                  <div class="" id="widget-a2332aacf77e91334b297efdec5a07e1">
                     <div class="">
                       <div class="col-lg-12  col-md-12  col-sm-12  col-xs-12  ">
                         <div class="footer-menu-link">
@@ -977,8 +750,6 @@
                         </div>
                       </div>
                     </div>
-                    <script type="text/javascript" src="js/frontend.js">
-                    </script>
                   </div>
                 </div>
               </div>
@@ -1011,260 +782,38 @@
             </a>
           </div>
         </footer>
-        <script type="text/javascript">
-          function setGridItem($) {
-            var winWidth = $(window).width();
-            var col = 3;
-            if (winWidth > 768) {
-              newcol = col;
-            }
-            if (winWidth < 768 && winWidth >= 640) {
-              newcol = 3;
-            }
-            if (winWidth >= 480 && winWidth < 640) {
-              newcol = 2;
-            }
-            if (winWidth < 480) {
-              newcol = 2;
-            }
-            $i = 0;
-            $('.show-grid > .item').each(function() {
-              $i++;
-              $(this).removeClass('first');
-              $(this).removeClass('last');
-              if (($i - 1) % newcol == 0) {
-                $(this).addClass('first');
-              } else if ($i % newcol == 0) {
-                $(this).addClass('last');
-              }
-            });
-          }
-          $mt(function($) {
-            var winWidth = $(window).width();
-            var winHeight = $(window).height();
-            var windowResize_t;
-            $(window).resize(function() {
-              var winNewWidth = $(window).width();
-              var winNewHeight = $(window).height();
-              if (winWidth != winNewWidth || winHeight != winNewHeight) {
-                clearTimeout(windowResize_t);
-                windowResize_t = setTimeout(function() {
-                  $(document).trigger("themeResize");
-                  setGridItem($);
-                },
-                200);
-              }
-              winWidth = winNewWidth;
-              winHeight = winNewHeight;
-            });
-            $('.mt-maincompare').hover(function() {
-              $(this).addClass('compare-active').find('.mtajaxcompare').stop().delay(200).slideDown();
-            },
-            function() {
-              $(this).removeClass('compare-active').find('.mtajaxcompare').stop().delay(200).slideUp();
-            });
-            $('.setting-big').hover(function() {
-              $(this).addClass('setting-bi-active').find('.mtsettingbig').stop().delay(200).slideDown();
-            },
-            function() {
-              $(this).removeClass('setting-bi-active').find('.mtsettingbig').stop().delay(200).slideUp();
-            });
-            $("#select-language").selectbox();
-            $("#select-currency").selectbox();
-            //lazyload
-            $("img.lazy").lazy({
-              effect: "fadeIn",
-              effectTime: 800,
-              threshold: 50,
-              afterLoad: function(element) {}
-            });
-            var text = $(".form-language a.sbSelector").text().toLowerCase();
-            $(".form-language a.sbSelector").css({
-              "background-image": "url('#" + text + ".png')",
-              "background-repeat": "no-repeat",
-              "background-position": "left center"
-            });
-
-            //Back to top
-            $(window).scroll(function() {
-              if ($(this).scrollTop() > 100) {
-                $('#back-top').fadeIn();
-              } else {
-                $('#back-top').fadeOut();
-              }
-            });
-            $('#back-top a').click(function() {
-              $('body,html').animate({
-                scrollTop: 0
-              },
-              800);
-              return false;
-            });
-
-            $('.bottom-content').click(function() {
-              $('html, body').animate({
-                scrollTop: $('.show-grid-slide').height()
-              },
-              800);
-              return false;
-            });
-
-            //Cart header
-            $('.mt-maincart').hover(function() {
-              $(this).addClass('cart-active').find('.ajaxcart').stop().delay(200).slideDown();
-            },
-            function() {
-              $(this).removeClass('cart-active').find('.ajaxcart').stop().delay(200).slideUp();
-            });
-            //Quickview
-            $('.product-quickview').live('click',
-            function() {
-              $.colorbox({
-                iframe: true,
-                href: this.href,
-                opacity: 0.5,
-                speed: 300,
-                current: '{current} / {total}',
-                close: "close",
-                innerWidth: '765px',
-                innerHeight: '650px',
-                onOpen: function() {
-                  $('#cboxLoadingGraphic').addClass('box-loading');
-                },
-                onComplete: function() {
-                  setTimeout(function() {
-                    $('#cboxLoadingGraphic').removeClass('box-loading');
-                  },
-                  1300);
-                }
-              });
-            });
-
-            $('.show-quickview').live('click',
-            function(e) {
-              if ($('.btn-cart-mobile').length == 0) {
-                $('[data-id=quickview-' + $(this).attr('data-id') + ']').trigger('click');
-              } else {
-                return window.location.href = $(this).attr('data-submit');
-              }
-            });
-          });
-          $mt(window).load(function() {
-            setGridItem($mt);
-            $mt.browserSelector();
-            if ($mt("html").hasClass("chrome")) {
-              $mt.smoothScroll();
-            }
-            if ($mt("html").hasClass("safari")) {
-              $mt.smoothScroll();
-            }
-            $mt(".mt-tooltip").tooltip();
-
-            var selectToggle = '<i class="fa fa-angle-down"></i>',
-            flextPrev = '<i class="fa fa-angle-left"></i>',
-            flextNext = '<i class="fa fa-angle-right"></i>';
-
-            $mt(".flex-direction-nav a, .more-views .more-views-prev, .more-views .more-views-next").empty();
-            $mt(".more-views").addClass("nav-wrapper-view");
-            //$mt(".sbToggle").append(selectToggle);
-            $mt(".flex-direction-nav a.flex-prev").append(flextPrev);
-            $mt(".flex-direction-nav a.flex-next").append(flextNext);
-
-            wow = new WOW({
-              boxClass: 'wow',
-              animateClass: 'animated',
-              offset: 100
-            });
-            wow.init();
-          });
-          $mt(".accordion-footer").addClass("accordion-show");
-          $mt(".accordion-footer").click(function() {
-            if ($mt(this).parent().next().is(":visible")) {
-              $mt(this).addClass("accordion-show");
-            } else {
-              $mt(this).removeClass("accordion-show");
-            }
-            $mt(this).parent().next().toggle(400);
-          });
-          //Background category header//
-          $mt(document).ready(function() {
-            var iconSearch = $mt(".quick-access").find(".mt-icon-ajax").find(".fa-search"),
-            formSearch = $mt(".quick-access").find(".form-search"),
-            headerOverlay = $mt(".header-content").find(".header-act");
-            $mt(iconSearch).click(function() {
-              if ($mt(formSearch).is(":visible")) {
-                $mt(formSearch).fadeOut(100);
-                $mt(this).removeClass("fa-arrows-alt").addClass("fa-search");
-                $mt(headerOverlay).removeClass("header-overlay");
-                $mt(this).attr("data-icon", "U");
-              } else {
-                $mt(formSearch).fadeIn(100);
-                $mt(this).removeClass("fa-search").addClass("fa-arrows-alt");
-                $mt(headerOverlay).addClass("header-overlay");
-                $mt(this).attr("data-icon", "M");
-              }
-            });
-          });
-
-          function iconFontAwesome() {
-            //add font icon awesome
-            $mt(".top-link .links li a").append("<i></i>");
-            $mt(".top-link .links li.first i").addClass("fa fa-user");
-            $mt(".top-link .links li a.top-link-cart i").addClass("fa fa-shopping-cart");
-            $mt(".top-link .links li a.top-link-wishlist i").addClass("fa fa-heart-o");
-            $mt(".top-link .links li a.top-link-checkout i").addClass("fa fa-check");
-            $mt(".top-link .links li.last i").addClass("fa fa-unlock-alt");
-          }
-        </script>
-        <script type="text/javascript">
-          (function($) {
-            $('.block-wishlist #wishlist-sidebar a').live('click',
-            function() {
-              if (confirm($(this).attr('data-confirm'))) {
-                removetowishlist($(this));
-              }
-              return false;
-            });
-            $('.block-wishlist-header #wishlist-header a.btn-remove').live('click',
-            function() {
-              if (confirm($(this).attr('data-confirm'))) {
-                removetowishlist($(this));
-              }
-              return false;
-            });
-            $('.add-to-links a.link-wishlist').live('click',
-            function() {
-              addtowishlist($(this));
-              return false;
-            });
-            if ($('.product-view').length > 0) {
-              productAddToCartForm.submitLight = function(button, url) {
-                return false;
-              }.bind(productAddToCartForm);
-            }
-            $('.add-to-links a.link-compare').live('click',
-            function() {
-              addtocompare($(this));
-              return false;
-            });
-            $('.block-compare #compare-items a, .block-top-compare a.btn-remove').live('click',
-            function() {
-              if (confirm($(this).attr('data-confirm'))) {
-                removecompare($(this));
-              }
-              return false;
-            });
-            $('.block-compare .clearall a, .block-compare .actions a, .block-top-compare .clearall a').live('click',
-            function() {
-              if (confirm($(this).attr('data-confirm'))) {
-                clearallcompare($(this));
-              }
-              return false;
-            });
-          })($mt);
-        </script>
       </section>
     </section>
+      <!-- 浮动购物车代码begin -->
+    <div class="fixedBox">
+      <ul class="fixedBoxList">
+        <li style="display: block;" id="cartboxs" class="fixeBoxLi cart_bd">
+          <P class="good_cart">6</P>
+          <span class="fixeBoxSpan"></span> <strong><i class="fa fa-shopping-cart"></i></strong>
+          <div class="cartBox">
+            <div class="bjfff"></div>
+            <div class="message">
+              <p>购物车内6件商品，300￥</p>
+              <a href="cart.html">去结算</a>
+          </div>
+          </div>
+        </li>
+        <li class="fixeBoxLi Service"> <span class="fixeBoxSpan"></span> <strong><i class="fa fa-qq"></i></strong>
+          <div class="ServiceBox">
+            <div class="bjfff"></div>
+            <dl >
+              <dt><img src="images/Service1.jpg"></dt>
+              <dd> <span>在线QQ客服</span>
+                <P class="p1">9:00-22:00</P>
+                <P class="p2"><a title="点击这里给我发消息"href="http://wpa.qq.com/msgrd?v=3&amp;uin=100000&amp;site=qq&amp;menu=yes"target="_blank">点击交谈</a></P>
+              </dd>
+            </dl>
+          </div>
+        </li>
+      </ul>
+    </div>
+    
+      <!-- 代码end -->
   </body>
   
   </html>

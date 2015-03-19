@@ -4,7 +4,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>
-      用户中心
+      支付
     </title>
     <meta name="description" content="Default Description" />
     <meta name="keywords" content="Magento, Varien, E-commerce" />
@@ -21,14 +21,15 @@
           <!--[if lt IE 7]>
             <script type="text/javascript">
               //<![CDATA[
-              var BLANK_URL = '#';
               var BLANK_IMG = 'images/spacer.gif';
               //]]>
               
             </script>
           <![endif]-->
+          <!-- date -->
+          <link rel="stylesheet" type="text/css" href="js/c/bootstrap-datepicker.css" />
+          <link rel="stylesheet" type="text/css" href="js/c/jquery.ptTimeSelect.css" />
           <link rel="stylesheet" type="text/css" href="css/home.css" />
-          <link rel="stylesheet" type="text/css" href="css/user-center.css" />
           <link rel="stylesheet" type="text/css" href="css/owl.carousel.css" />
           <link rel="stylesheet" type="text/css" href="css/owl.theme.css" />
           <link rel="stylesheet" type="text/css" href="css/owl.transitions.css"
@@ -64,8 +65,13 @@
           />
           <link rel="stylesheet" type="text/css" href="css/layout_default.css" media="all"
           />
+          <link rel="stylesheet" type="text/css" href="css/opc.css" media="all"
+          />
           <link rel="stylesheet" type="text/css" href="css/print.css" media="print"
           />
+           <link rel="stylesheet" type="text/css" href="css/lanrenzhijia.css" media="all"
+          />
+          <!-- date -->
           <script type="text/javascript" src="js/prototype.js">
           </script>
           <script type="text/javascript" src="js/ccard.js">
@@ -92,8 +98,12 @@
           </script>
           <script type="text/javascript" src="js/cookies.js">
           </script>
-          <script type="text/javascript" src="js/jquery-1.8.2.min.js">
-          </script>
+          <script type="text/javascript" src="js/jquery-1.8.3.min.js">
+           </script>
+         <!-- date -->
+          <script src="js/c/jquery.timepicker.js"></script>
+          <script src="js/c/bootstrap-datepicker.js"></script>
+          <!-- date end  -->
           <script type="text/javascript" src="js/wow.min.js">
           </script>
           <script type="text/javascript" src="js/bootstrap.min.js">
@@ -108,12 +118,14 @@
           </script>
           <script type="text/javascript" src="js/jquery.cookie.js">
           </script>
+          <script type="text/javascript" src="js/checkout.js">
+          </script>
+          <script type="text/javascript" src="js/extend.js">
+          </script>
           <script type="text/javascript" src="js/weee.js">
           </script>
-          <script type="text/javascript" src="js/lanrenzhijia.js">
+          <script type="text/javascript" src="js/opcheckout.js">
           </script>
-          <link rel="stylesheet" type="text/css" href="css/lanrenzhijia.css"
-          media="all" />
           <!--[if lt IE 8]>
             <link rel="stylesheet" type="text/css" href="css/styles-ie.css"
             media="all" />
@@ -137,12 +149,6 @@
             media="all" />
           <![endif]-->
           <script type="text/javascript">
-            var magenThemes = {};
-            magenThemes.responsive = true;
-            magenThemes.maxBreak = 1170;
-            magenThemes.url = '#';
-          </script>
-          <script type="text/javascript">
             //<![CDATA[
             Mage.Cookies.path = '/';
             Mage.Cookies.domain = '.mt-bebakery.magentheme.com';
@@ -157,7 +163,7 @@
           </script>
           <script type="text/javascript">
             var MT = MT || {};
-            MT.FORM_KEY = '8f8YdFVoVjNbncAe';
+            MT.FORM_KEY = 'EdfsRPHjzB2i1pzn';
 
             function setLocationWidget(url) {
               if (url.indexOf('form_key/') !== -1) {
@@ -181,174 +187,159 @@
           </script>
   </head>
   
-  <body class="   customer-account-index">
+  <body class="   opc-index-index">
     <section class="mt-container">
-     
-     <!-- navigation BOF -->
-     <div class="mt-menu mt-effect-slide">
-         <div class="mt-menu-active">
-             <div class="navbar-header">
-                 <div class="navbar-toggle" data-toggle="collapse">
-                     <div class="collapsed-icon pull-left">
-                         <span class="sr-only">
-                            导航
-                         </span>
-                         <span class="icon-bar">
-                         </span>
-                         <span class="icon-bar">
-                         </span>
-                         <span class="icon-bar">
-                         </span>
-                     </div>
-                     <span class="title-canvas">
-                         菜单
-                     </span>
-                     <button type="button" class="mt-close-canvas">
-                     </button>
-                 </div>
-             </div>
-         </div>
-         <!-- 小屏幕 -->
-         <div class="sidebar">
-             <ul id="mt_accordionmenu" class="nav-accordion nav-mobile-accordion">
-                 <li class="level0 nav-1 level-top first parent">
-                     <i class="fa fa-angle-down">
-                     </i>
-                     <a href="#" class="level-top">
-                         <span>
-                             系列
-                         </span>
-                     </a>
-                     <ul class="level0">
-                         <li class="level1 item nav-1-1 first parent">
-                             <a href="#">
-                                 <span>
-                                     盒装系列
-                                 </span>
-                             </a>
-                         </li>
-                         <li class="level1 item nav-1-2 last parent">
-                             <a href="#">
-                                 <span>
-                                     花束系列
-                                 </span>
-                             </a>
-                         </li>
-                         <li class="level1 item nav-1-2 last parent">
-                             <a href="#">
-                                 <span>
-                                     童趣系列
-                                 </span>
-                             </a>
-                         </li>
-                         <li class="level1 item nav-1-2 last parent">
-                             <a href="#">
-                                 <span>
-                                     特惠系列
-                                 </span>
-                             </a>
-                         </li>
-                     </ul>
-                 </li>
-                 <li class="level0 nav-1 level-top first parent">
-                     <i class="fa fa-angle-down">
-                     </i>
-                     <a href="#" class="level-top">
-                         <span>
-                             用途
-                         </span>
-                     </a>
-                     <ul class="level0">
-                         <li class="level1 item nav-1-1 first parent">
-                             <a href="#">
-                                 <span>
-                                    生日
-                                 </span>
-                             </a>
-                         </li>
-                         <li class="level1 item nav-1-2 last parent">
-                             <a href="#">
-                                 <span>
-                                     礼物
-                                 </span>
-                             </a>
-                         </li>
-                          <li class="level1 item nav-1-2 last parent">
-                             <a href="#">
-                                 <span>
-                                     婚礼
-                                 </span>
-                             </a>
-                         </li>
-                          <li class="level1 item nav-1-2 last parent">
-                             <a href="#">
-                                 <span>
-                                     商务
-                                 </span>
-                             </a>
-                         </li>
-                          <li class="level1 item nav-1-2 last parent">
-                             <a href="#">
-                                 <span>
-                                     回礼
-                                 </span>
-                             </a>
-                         </li>
-                     </ul>
-                 </li>
-                 <li class="level0 nav-2 level-top">
-                     <a href="food.html" class="level-top">
-                         <span>
-                            食材
-                         </span>
-                     </a>
-                 </li>
-                 <li class="level0 nav-3 level-top">
-                     <a href="#" class="level-top">
-                         <span>
-                             FAQ
-                         </span>
-                     </a>
-                 </li>
-                 <li class="level0 nav-4 level-top last">
-                     <a href="#" class="level-top">
-                         <span>
-                             配送说明
-                         </span>
-                     </a>
-                 </li>
-             </ul>
-             <script type="text/javascript">
-                 $mt(document).ready(function() {
-                     $mt("#mt_accordionmenu").mtAccordionMenu({
-                         accordion: true,
-                         speed: 400,
-                         closedSign: 'collapse',
-                         openedSign: 'expand',
-                         mouseType: 0,
-                         easing: 'easeInOutQuad'
-                     });
-                 });
-             </script>
-         </div>
-     </div>
-     <div class="site-overlay">
-     </div>
-      <section class="mt-wrapper">
-        <noscript>
-          <div class="global-site-notice noscript">
-            <div class="notice-inner">
-              <p>
-                <strong>
-                  JavaScript seems to be disabled in your browser.
-                </strong>
-                <br />
-                You must have JavaScript enabled in your browser to utilize the functionality
-                of this website.
-              </p>
+                  <!-- navigation BOF -->
+            <div class="mt-menu mt-effect-slide">
+                <div class="mt-menu-active">
+                    <div class="navbar-header">
+                        <div class="navbar-toggle" data-toggle="collapse">
+                            <div class="collapsed-icon pull-left">
+                                <span class="sr-only">
+                                   导航
+                                </span>
+                                <span class="icon-bar">
+                                </span>
+                                <span class="icon-bar">
+                                </span>
+                                <span class="icon-bar">
+                                </span>
+                            </div>
+                            <span class="title-canvas">
+                                菜单
+                            </span>
+                            <button type="button" class="mt-close-canvas">
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- 小屏幕 -->
+                <div class="sidebar">
+                    <ul id="mt_accordionmenu" class="nav-accordion nav-mobile-accordion">
+                        <li class="level0 nav-1 level-top first parent">
+                            <i class="fa fa-angle-down">
+                            </i>
+                            <a href="#" class="level-top">
+                                <span>
+                                    系列
+                                </span>
+                            </a>
+                            <ul class="level0">
+                                <li class="level1 item nav-1-1 first parent">
+                                    <a href="#">
+                                        <span>
+                                            盒装系列
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="level1 item nav-1-2 last parent">
+                                    <a href="#">
+                                        <span>
+                                            花束系列
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="level1 item nav-1-2 last parent">
+                                    <a href="#">
+                                        <span>
+                                            童趣系列
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="level1 item nav-1-2 last parent">
+                                    <a href="#">
+                                        <span>
+                                            特惠系列
+                                        </span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="level0 nav-1 level-top first parent">
+                            <i class="fa fa-angle-down">
+                            </i>
+                            <a href="#" class="level-top">
+                                <span>
+                                    用途
+                                </span>
+                            </a>
+                            <ul class="level0">
+                                <li class="level1 item nav-1-1 first parent">
+                                    <a href="#">
+                                        <span>
+                                           生日
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="level1 item nav-1-2 last parent">
+                                    <a href="#">
+                                        <span>
+                                            礼物
+                                        </span>
+                                    </a>
+                                </li>
+                                 <li class="level1 item nav-1-2 last parent">
+                                    <a href="#">
+                                        <span>
+                                            婚礼
+                                        </span>
+                                    </a>
+                                </li>
+                                 <li class="level1 item nav-1-2 last parent">
+                                    <a href="#">
+                                        <span>
+                                            商务
+                                        </span>
+                                    </a>
+                                </li>
+                                 <li class="level1 item nav-1-2 last parent">
+                                    <a href="#">
+                                        <span>
+                                            回礼
+                                        </span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="level0 nav-2 level-top">
+                            <a href="food.html" class="level-top">
+                                <span>
+                                   食材
+                                </span>
+                            </a>
+                        </li>
+                        <li class="level0 nav-3 level-top">
+                            <a href="#" class="level-top">
+                                <span>
+                                    FAQ
+                                </span>
+                            </a>
+                        </li>
+                        <li class="level0 nav-4 level-top last">
+                            <a href="#" class="level-top">
+                                <span>
+                                    配送说明
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                    <script type="text/javascript">
+                        $mt(document).ready(function() {
+                            $mt("#mt_accordionmenu").mtAccordionMenu({
+                                accordion: true,
+                                speed: 400,
+                                closedSign: 'collapse',
+                                openedSign: 'expand',
+                                mouseType: 0,
+                                easing: 'easeInOutQuad'
+                            });
+                        });
+                    </script>
+                </div>
             </div>
-          </div>
-        </noscript>
+            <div class="site-overlay">
+            </div>
+      <section class="mt-wrapper">
         <header class="header-container header-bg-img">
             <div class="header home-header">
                     <div class="container">
@@ -374,9 +365,9 @@
                             </div>
                             <div class="header-content-left col-lg-2 col-md-2 col-sm-2 col-xs-12 v-grid">
                                 <div class="logo">
-                                    <a href="index.html" title="mt_bakery">
+                                    <a href="index.html" title="薇茜甜点">
                                         <img class="img-responsive" src="images/logo.png"
-                                        alt="mt_bakery" />
+                                        alt="薇茜甜点" />
                                     </a>
                                 </div>
                             </div>
@@ -396,7 +387,7 @@
                                                         </div>
                                                         <div class="mt-main-menu">
                                                             <ul id="mtnav" class="megamenu">
-                                                                <li class="level0 active nav-1 level-top first parent parent-sub">
+                                                                <li class="level0  nav-1 level-top first parent parent-sub">
                                                                     <i class="fa fa-angle-down">
                                                                     </i>
                                                                     <a href="#" class="level-top">
@@ -638,35 +629,24 @@
                     </div>
                 </div>
             </div>
-            <script type="text/javascript">
-                // $mt(window).load(function() {
-                //     $mt("#mt-sticky-header").sticky({
-                //         topSpacing: 0
-                //     });
-                //     var $logoImg = $mt('.mt-wrapper .header .logo img');
-                //     if ($logoImg.css('min-height') == '1px') {
-                //         $logoImg.attr('src', $logoImg.attr('src').replace('logo.png', 'logo_1.png'));
-                //     }
-                // });
-            </script>
         </header>
-        <section class="main-container col2-left-layout">
-          <div class="show-grid-slide show-slide-all">
-            <div class="container">
-              <div class="row show-grid">
-                <div class="mt-revolution-slider col-lg-9 col-md-9 col-sm-9 col-xs-12">
-                  <div class="mt-preface">
-                  </div>
-                </div>
-                <div class="main_slide_right col-lg-3 col-md-3 col-sm-3">
-                </div>
+        <div class="clearfix">
+        </div>
+        <section class="main-container col1-layout">
+          <div class="show-grid-slide">
+            <div class="mt-revolution-slider">
+              <div class="mt-preface">
+                <a class="bottom-content" href="javascript:void(0);">
+                  <i class="fa fa-angle-down">
+                  </i>
+                </a>
               </div>
             </div>
           </div>
-          <div>
+          <div class="">
             <div class="container">
               <div class="main_content">
-                <div class="row show-grid">
+                <div class="row">
                   <div class="col-lg-12">
                   </div>
                 </div>
@@ -676,8 +656,8 @@
           <div class="main-top">
             <div class="container">
               <div class="main">
-                <div class="row show-grid">
-                  <div class="col-lg-12">
+                <div class="row">
+                  <div class="clearfix">
                   </div>
                 </div>
               </div>
@@ -685,259 +665,262 @@
           </div>
           <div class="container-main">
             <div class="main-content container">
-              <div class="row main">
-                <div class="col-lg-3 col-md-3 col-sm-3 col-pull-3">
-                  <div class="col-left sidebar">
-                    <div class="block block-account">
-                      <div class="block-title">
-                        <strong>
-                          <span>
-                            我的账号
-                          </span>
-                        </strong>
-                      </div>
-                      <div class="block-content">
-                        <ul>
-                          <li class="current">
-                            <strong>
-                              欢迎页
-                            </strong>
-                          </li>
-                          <li>
-                            <a href="user_account.html">
-                              账户信息
-                            </a>
-                          </li>
-                          <li>
-                            <a href="user_address_show.html">
-                              收货地址
-                            </a>
-                          </li>
-                          <li>
-                            <a href="user_myorder.html">
-                              我的订单
-                            </a>
-                          </li>
-                          <li>
-                            <a href="user_store.html">
-                              我的收藏
-                            </a>
-                          </li>
-                        </ul>
+              <div class="row container">
+                <div class="col-main">
+                  <div class="opc-wrapper-opc">
+                    <h2>
+                      付款
+                    </h2>
+                    <p>
+                      填写以下字段来完成你的购买!
+                    </p>
+                    <div class="clear">
+                    </div>
+                    <div class="opc-col-left">
+                      <div id="opc-address-form-billing" method="post">
+                        <div id="co-billing-form">
+                          <h3>
+                            收货人信息
+                          </h3>
+                          <ul class="form-list">
+                            <li id="billing-new-address-form">
+                              <fieldset>
+                                <input type="hidden" name="billing[address_id]" value="167" id="billing:address_id"
+                                />
+                                <ul>
+                                  <li class="fields">
+                                    <div class="customer-name">
+                                      <div class="field name-firstname">
+                                        <label for="billing:firstname" class="required">
+                                          姓名
+                                        </label>
+                                        <div class="input-box">
+                                          <p class="form-control-static">于宏杰</p>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </li>
+                                  <li class="fields">
+                                    <div class="field">
+                                      <label for="billing:company">
+                                        详细地址  
+                                      </label>
+                                      <div class="input-box">
+                                        <p class="form-control-static">北京市朝阳区东坝中路奥林匹克花园</p>
+                                      </div>
+                                    </div>
+                                  </li>
+                                  <li class="wide">
+                                    <label for="billing:street1" class="required">
+                                      电话
+                                    </label>
+                                    <div class="input-box">
+                                      <p class="form-control-static">13303360636</p>
+                                    </div>
+                                  </li>
+                                   <li class="wide">
+                                    <label for="billing:street1" class="required">
+                                      邮编
+                                    </label>
+                                    <div class="input-box">
+                                      <p class="form-control-static">065500</p>
+                                    </div>
+                                  </li>
+                                   <li class="wide">
+                                    <label for="billing:street1" class="required">
+                                      电子邮件
+                                    </label>
+                                    <div class="input-box">
+                                      <p class="form-control-static">yuhongjie@mointe.cn</p>
+                                    </div>
+                                  </li>
+                                  <li class="control">
+                                    <a href="user_address_show.html" for="billing:save_in_address_book">
+                                      修改
+                                    </a>
+                                  </li>
+                                </ul>
+                              </fieldset>
+                            </li>
+                          </ul>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                </div>
-                <div class="col-lg-9 col-md-9 col-sm-9 col-push-9 col-xs-12">
-                  <div class="col-main">
-                    <div class="my-account">
-                      <div class="dashboard">
-                        <div class="page-title">
-                          <h1>
-                            用户中心
-                          </h1>
+                    <div class="opc-col-center">
+                      <div class="shipping-block">
+                        <h3>
+                          配送方式和时间
+                        </h3>
+                        <div id="shipping-block-methods">
+                          <form id="opc-co-shipping-method-form" autocomplete="off">
+                            <div id="checkout-shipping-method-load">
+                              <dt>
+                              <input id=""  type="radio" name="payment[method]"
+                              title="Check / Money order" onclick="" checked="checked"
+                              class="radio" />
+                              <label for="">
+                                自提
+                              </label>
+                            </dt>
+                            <dt>
+                              <input id="" value="" type="radio" name=""
+                              title="" onclick="" checked=""
+                              class="radio" />
+                              <label for="p_method_checkmo">
+                                送货上门
+                              </label>
+                            </dt>
+                            <dt>
+                               <label for="p_method_checkmo">
+                                送货日期
+                              </label>
+                               <article>
+                                  <div class="demo">
+                                      <p id="basicExample">
+                                          <input type="text" class="date start" />
+                                      </p>
+                                  </div>
+                                  <script>
+                                      $('#basicExample .time').timepicker({
+                                          'showDuration': true,
+                                          'timeFormat': 'g:ia'
+                                      });
+
+                                      $('#basicExample .date').datepicker({
+                                          'format': 'm/d/yyyy',
+                                          'autoclose': true
+                                      });
+
+                                      $('#basicExample').datepair();
+                                  </script>
+                              </article>
+                            </dt>
+                            </div>
+                          </form>
                         </div>
-                        <div class="welcome-msg">
-                          <p class="hello">
-                            <strong>
-                              你好，于宏杰
-                            </strong>
-                          </p>
-                        </div>
-                        <div class="box-account box-recent">
-                          <div class="box-head">
-                            <h2>
-                              最近订单
-                            </h2>
-                            <a href="user_myorder.html">
-                              查看全部
-                            </a>
-                          </div>
-                          <table class="data-table" id="my-orders-table">
-                            <col width="1" />
-                            <col width="1" />
+                      </div>
+                      <div class="payment-block ">
+                        <h3>
+                            支付方式
+                        </h3>
+                        <form action="" id="co-payment-form">
+                          <fieldset>
+                            <dt>
+                              <input id="p_method_checkmo" value="checkmo" type="radio" name="payment[method]"
+                              title="Check / Money order" onclick="payment.switchMethod('checkmo')" checked="checked"
+                              class="radio" />
+                              <label for="p_method_checkmo">
+                                支付宝
+                              </label>
+                            </dt>
+                            <dt>
+                              <input id="p_method_checkm" value="checkmo" type="radio" name="payment[method]"
+                              title="Check / Money order" onclick="payment.switchMethod('checkmo')" checked="checked"
+                              class="radio" />
+                              <label for="p_method_checkmo">
+                                货到付款
+                              </label>
+                            </dt>
+                          </fieldset>
+                        </form>
+                      </div>
+                    </div>
+                    <div class="opc-col-right">
+                      <h3>
+                        商品信息
+                      </h3>
+                      <div id="opc-review-block">
+                        <div id="checkout-review-table-wrapper">
+                          <table class="opc-data-table" id="checkout-review-table">
                             <col />
                             <col width="1" />
                             <col width="1" />
                             <col width="1" />
                             <thead>
                               <tr>
-                                <th>
-                                  订单号
+                                <th rowspan="1">
+                                  商品名称
                                 </th>
-                                <th>
-                                  订单时间
+                                <th colspan="1" class="a-center">
+                                  价格
                                 </th>
-                                <th class="user-home-price">
-                                  <span class="nobr">
-                                    订单总金额
-                                  </span>
+                                <th rowspan="1" class="a-center">
+                                  数量
                                 </th>
-                                <th>
-                                  状态
-                                </th>
-                                <th>
-                                  操作
+                                <th colspan="1" class="a-center">
+                                  小计
                                 </th>
                               </tr>
                             </thead>
+                            <tfoot>
+                              <tr>
+                                <td style="" class="a-right" colspan="3">
+                                  小计
+                                </td>
+                                <td style="" class="a-right">
+                                  <span class="price">
+                                    ￥12.00
+                                  </span>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td style="" class="a-right" colspan="3">
+                                  <strong>
+                                    总计
+                                  </strong>
+                                </td>
+                                <td style="" class="a-right">
+                                  <strong>
+                                    <span class="price">
+                                      ￥17.00
+                                    </span>
+                                  </strong>
+                                </td>
+                              </tr>
+                            </tfoot>
                             <tbody>
                               <tr>
                                 <td>
-                                  100000004
+                                  <h3 class="product-name">
+                                    薇茜甜点
+                                  </h3>
                                 </td>
-                                <td>
-                                  <span class="nobr">
-                                    3/12/2015
+                                <td class="a-right">
+                                  <span class="cart-price">
+                                    <span class="price">
+                                      ￥12.00
+                                    </span>
                                   </span>
-                                </td>
-                                <td>
-                                  <span class="price">
-                                    ￥17.00
-                                  </span>
-                                </td>
-                                <td>
-                                  <em>
-                                    已发货
-                                  </em>
                                 </td>
                                 <td class="a-center">
-                                  <span class="nobr">
-                                    <a href="#">
-                                     取消订单
-                                    </a>
+                                  1
+                                </td>
+                                <td class="a-right">
+                                  <span class="cart-price">
+                                    <span class="price">
+                                      ￥12.00
+                                    </span>
                                   </span>
                                 </td>
                               </tr>
                             </tbody>
                           </table>
-                          <script type="text/javascript">
-                            decorateTable('my-orders-table')
-                          </script>
                         </div>
-                        <div class="box-account box-info">
-                          <div class="box-head">
-                            <h2>
-                              账户信息
-                            </h2>
-                          </div>
-                          <div class="col2-set">
-                            <div class="col-1">
-                              <div class="box">
-                                <div class="box-title">
-                                  <h3>
-                                    联系信息
-                                  </h3>
-                                  <a href="user_account.html">
-                                    编辑
-                                  </a>
-                                </div>
-                                <div class="box-content">
-                                  <p>
-                                    于宏杰
-                                    <br />
-                                    yuhongjie@mointe.cn
-                                    <br />
-                                    <a href="user_account.html">
-                                      修改密码
-                                    </a>
-                                  </p>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="col2-set">
-                            <div class="box">
-                              <div class="box-title">
-                                <h3>
-                                  地址信息
-                                </h3>
-                                <a href="user_address_show.html">
-                                  管理地址
-                                </a>
-                              </div>
-                              <div class="box-content">
-                                <div class="col-1">
-                                  <h4>
-                                    默认地址
-                                  </h4>
-                                  <address>
-                                    收货人姓名：于宏杰
-                                    <br/>
-                                    省份： 北京
-                                    <br />
-                                    城市：北京  
-                                    <br />
-                                    地区：朝阳区
-                                    <br/>
-                                    详情地址：奥林匹克花园
-                                    <br/>
-                                    电话: 13303360636
-                                    <br />
-                                    <a href="user_address.html">
-                                      编辑
-                                    </a>
-                                  </address>
-                                </div>
-                                <div class="col-2">
-                                  <h4>
-                                    默认地址
-                                  </h4>
-                                  <address>
-                                    收货人姓名：于宏杰
-                                    <br/>
-                                    省份： 北京
-                                    <br />
-                                    城市：北京  
-                                    <br />
-                                    地区：朝阳区
-                                    <br/>
-                                    详情地址：奥林匹克花园
-                                    <br/>
-                                    电话: 13303360636
-                                    <br />
-                                    <a href="user_address.html">
-                                      编辑
-                                    </a>
-                                  </address>
-                                </div>
-                              </div>
-                            </div>
+                        <div id="checkout-review-submit">
+                          <div class="buttons-set" id="review-buttons-container">
+                            <button type="button" title="Place Order" class="button btn-checkout opc-btn-checkout">
+                              <span>
+                                <span>
+                                  提交订单
+                                </span>
+                              </span>
+                            </button>
                           </div>
                         </div>
                       </div>
                     </div>
                   </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="parallax">
-            <div class="main">
-              <div class="row show-grid">
-                <div class="mt-parallax mt-parallax-cars">
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="mt-bottom">
-            <div class="container">
-              <div class="main">
-                <div class="row show-grid">
-                  <div class="col-lg-12">
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="mt-postscript">
-            <div class="container">
-              <div class="main">
-                <div class="row show-grid">
-                  <div class="col-lg-12">
-                    <div class="mt-postscript">
-                    </div>
-                  </div>
+
                 </div>
               </div>
             </div>
@@ -967,7 +950,6 @@
                                         </div>
                                         <script type="text/javascript" src="js/frontend.js">
                                         </script>
-                                     
                                     </div>
                                     <div class="" id="widget-a2332aacf77e91334b297efdec5a07e1">
                                         <div class="">
@@ -998,6 +980,7 @@
                                                 </div>
                                             </div>
                                         </div>
+                                    
                                     </div>
                                 </div>
                             </div>
@@ -1032,293 +1015,8 @@
                         </a>
                     </div>
                 </footer>
-        <script type="text/javascript">
-          function setGridItem($) {
-            var winWidth = $(window).width();
-            var col = 3;
-            if (winWidth > 768) {
-              newcol = col;
-            }
-            if (winWidth < 768 && winWidth >= 640) {
-              newcol = 3;
-            }
-            if (winWidth >= 480 && winWidth < 640) {
-              newcol = 2;
-            }
-            if (winWidth < 480) {
-              newcol = 2;
-            }
-            $i = 0;
-            $('.show-grid > .item').each(function() {
-              $i++;
-              $(this).removeClass('first');
-              $(this).removeClass('last');
-              if (($i - 1) % newcol == 0) {
-                $(this).addClass('first');
-              } else if ($i % newcol == 0) {
-                $(this).addClass('last');
-              }
-            });
-          }
-          $mt(function($) {
-            var winWidth = $(window).width();
-            var winHeight = $(window).height();
-            var windowResize_t;
-            $(window).resize(function() {
-              var winNewWidth = $(window).width();
-              var winNewHeight = $(window).height();
-              if (winWidth != winNewWidth || winHeight != winNewHeight) {
-                clearTimeout(windowResize_t);
-                windowResize_t = setTimeout(function() {
-                  $(document).trigger("themeResize");
-                  setGridItem($);
-                },
-                200);
-              }
-              winWidth = winNewWidth;
-              winHeight = winNewHeight;
-            });
-            $('.mt-maincompare').hover(function() {
-              $(this).addClass('compare-active').find('.mtajaxcompare').stop().delay(200).slideDown();
-            },
-            function() {
-              $(this).removeClass('compare-active').find('.mtajaxcompare').stop().delay(200).slideUp();
-            });
-            $('.setting-big').hover(function() {
-              $(this).addClass('setting-bi-active').find('.mtsettingbig').stop().delay(200).slideDown();
-            },
-            function() {
-              $(this).removeClass('setting-bi-active').find('.mtsettingbig').stop().delay(200).slideUp();
-            });
-            $("#select-language").selectbox();
-            $("#select-currency").selectbox();
-            //lazyload
-            $("img.lazy").lazy({
-              effect: "fadeIn",
-              effectTime: 800,
-              threshold: 50,
-              afterLoad: function(element) {}
-            });
-            var text = $(".form-language a.sbSelector").text().toLowerCase();
-            $(".form-language a.sbSelector").css({
-              "background-image": "url('#" + text + ".png')",
-              "background-repeat": "no-repeat",
-              "background-position": "left center"
-            });
-
-            //Back to top
-            $(window).scroll(function() {
-              if ($(this).scrollTop() > 100) {
-                $('#back-top').fadeIn();
-              } else {
-                $('#back-top').fadeOut();
-              }
-            });
-            $('#back-top a').click(function() {
-              $('body,html').animate({
-                scrollTop: 0
-              },
-              800);
-              return false;
-            });
-
-            $('.bottom-content').click(function() {
-              $('html, body').animate({
-                scrollTop: $('.show-grid-slide').height()
-              },
-              800);
-              return false;
-            });
-
-            //Cart header
-            $('.mt-maincart').hover(function() {
-              $(this).addClass('cart-active').find('.ajaxcart').stop().delay(200).slideDown();
-            },
-            function() {
-              $(this).removeClass('cart-active').find('.ajaxcart').stop().delay(200).slideUp();
-            });
-            //Quickview
-            $('.product-quickview').live('click',
-            function() {
-              $.colorbox({
-                iframe: true,
-                href: this.href,
-                opacity: 0.5,
-                speed: 300,
-                current: '{current} / {total}',
-                close: "close",
-                innerWidth: '765px',
-                innerHeight: '650px',
-                onOpen: function() {
-                  $('#cboxLoadingGraphic').addClass('box-loading');
-                },
-                onComplete: function() {
-                  setTimeout(function() {
-                    $('#cboxLoadingGraphic').removeClass('box-loading');
-                  },
-                  1300);
-                }
-              });
-            });
-
-            $('.show-quickview').live('click',
-            function(e) {
-              if ($('.btn-cart-mobile').length == 0) {
-                $('[data-id=quickview-' + $(this).attr('data-id') + ']').trigger('click');
-              } else {
-                return window.location.href = $(this).attr('data-submit');
-              }
-            });
-          });
-          $mt(window).load(function() {
-            setGridItem($mt);
-            $mt.browserSelector();
-            if ($mt("html").hasClass("chrome")) {
-              $mt.smoothScroll();
-            }
-            if ($mt("html").hasClass("safari")) {
-              $mt.smoothScroll();
-            }
-            $mt(".mt-tooltip").tooltip();
-
-            var selectToggle = '<i class="fa fa-angle-down"></i>',
-            flextPrev = '<i class="fa fa-angle-left"></i>',
-            flextNext = '<i class="fa fa-angle-right"></i>';
-
-            $mt(".flex-direction-nav a, .more-views .more-views-prev, .more-views .more-views-next").empty();
-            $mt(".more-views").addClass("nav-wrapper-view");
-            //$mt(".sbToggle").append(selectToggle);
-            $mt(".flex-direction-nav a.flex-prev").append(flextPrev);
-            $mt(".flex-direction-nav a.flex-next").append(flextNext);
-
-            wow = new WOW({
-              boxClass: 'wow',
-              animateClass: 'animated',
-              offset: 100
-            });
-            wow.init();
-          });
-          $mt(".accordion-footer").addClass("accordion-show");
-          $mt(".accordion-footer").click(function() {
-            if ($mt(this).parent().next().is(":visible")) {
-              $mt(this).addClass("accordion-show");
-            } else {
-              $mt(this).removeClass("accordion-show");
-            }
-            $mt(this).parent().next().toggle(400);
-          });
-          //Background category header//
-          $mt(document).ready(function() {
-            var iconSearch = $mt(".quick-access").find(".mt-icon-ajax").find(".fa-search"),
-            formSearch = $mt(".quick-access").find(".form-search"),
-            headerOverlay = $mt(".header-content").find(".header-act");
-            $mt(iconSearch).click(function() {
-              if ($mt(formSearch).is(":visible")) {
-                $mt(formSearch).fadeOut(100);
-                $mt(this).removeClass("fa-arrows-alt").addClass("fa-search");
-                $mt(headerOverlay).removeClass("header-overlay");
-                $mt(this).attr("data-icon", "U");
-              } else {
-                $mt(formSearch).fadeIn(100);
-                $mt(this).removeClass("fa-search").addClass("fa-arrows-alt");
-                $mt(headerOverlay).addClass("header-overlay");
-                $mt(this).attr("data-icon", "M");
-              }
-            });
-          });
-
-          function iconFontAwesome() {
-            //add font icon awesome
-            $mt(".top-link .links li a").append("<i></i>");
-            $mt(".top-link .links li.first i").addClass("fa fa-user");
-            $mt(".top-link .links li a.top-link-cart i").addClass("fa fa-shopping-cart");
-            $mt(".top-link .links li a.top-link-wishlist i").addClass("fa fa-heart-o");
-            $mt(".top-link .links li a.top-link-checkout i").addClass("fa fa-check");
-            $mt(".top-link .links li.last i").addClass("fa fa-unlock-alt");
-          }
-        </script>
-        <script type="text/javascript">
-          (function($) {
-            $('.block-wishlist #wishlist-sidebar a').live('click',
-            function() {
-              if (confirm($(this).attr('data-confirm'))) {
-                removetowishlist($(this));
-              }
-              return false;
-            });
-            $('.block-wishlist-header #wishlist-header a.btn-remove').live('click',
-            function() {
-              if (confirm($(this).attr('data-confirm'))) {
-                removetowishlist($(this));
-              }
-              return false;
-            });
-            $('.add-to-links a.link-wishlist').live('click',
-            function() {
-              addtowishlist($(this));
-              return false;
-            });
-            if ($('.product-view').length > 0) {
-              productAddToCartForm.submitLight = function(button, url) {
-                return false;
-              }.bind(productAddToCartForm);
-            }
-            $('.add-to-links a.link-compare').live('click',
-            function() {
-              addtocompare($(this));
-              return false;
-            });
-            $('.block-compare #compare-items a, .block-top-compare a.btn-remove').live('click',
-            function() {
-              if (confirm($(this).attr('data-confirm'))) {
-                removecompare($(this));
-              }
-              return false;
-            });
-            $('.block-compare .clearall a, .block-compare .actions a, .block-top-compare .clearall a').live('click',
-            function() {
-              if (confirm($(this).attr('data-confirm'))) {
-                clearallcompare($(this));
-              }
-              return false;
-            });
-          })($mt);
-        </script>
-
-          </div>
-        </div>
       </section>
     </section>
-      <!-- 浮动购物车代码begin -->
-    <div class="fixedBox">
-      <ul class="fixedBoxList">
-        <li style="display: block;" id="cartboxs" class="fixeBoxLi cart_bd">
-          <P class="good_cart">6</P>
-          <span class="fixeBoxSpan"></span> <strong><i class="fa fa-shopping-cart"></i></strong>
-          <div class="cartBox">
-            <div class="bjfff"></div>
-            <div class="message">
-              <p>购物车内6件商品，300￥</p>
-              <a href="cart.html">去结算</a>
-          </div>
-          </div>
-        </li>
-        <li class="fixeBoxLi Service"> <span class="fixeBoxSpan"></span> <strong><i class="fa fa-qq"></i></strong>
-          <div class="ServiceBox">
-            <div class="bjfff"></div>
-            <dl >
-              <dt><img src="images/Service1.jpg"></dt>
-              <dd> <span>在线QQ客服</span>
-                <P class="p1">9:00-22:00</P>
-                <P class="p2"><a title="点击这里给我发消息"href="http://wpa.qq.com/msgrd?v=3&amp;uin=100000&amp;site=qq&amp;menu=yes"target="_blank">点击交谈</a></P>
-              </dd>
-            </dl>
-          </div>
-        </li>
-      </ul>
-    </div>
-    
-      <!-- 代码end -->
   </body>
   
   </html>
