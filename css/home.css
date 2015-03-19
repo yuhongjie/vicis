@@ -17,7 +17,8 @@
 	margin-left: -50px;
 }
 /*特色推荐*/
-.home-fea-title1{	
+.home-fea-title1{
+    font-family: Microsoft YaHei;	
 	color: #fff;
 	padding-top: 5px;
 	margin-top: 10px;
@@ -28,7 +29,8 @@
 	background: #e67a92;
 	font-size: 20px;
 }
-.home-fea-title2{	
+.home-fea-title2{
+    font-family: Microsoft YaHei;		
 	color: #fff;
 	padding-top: 5px;
 	margin-top: 10px;
@@ -39,7 +41,8 @@
 	background: #6fc7bc;
 	font-size: 20px;
 }
-.home-fea-title3{	
+.home-fea-title3{
+    font-family: Microsoft YaHei;		
 	color: #fff;
 	padding-top: 5px;
 	margin-top: 10px;
@@ -50,7 +53,8 @@
 	background: #cdd140;
 	font-size: 20px;
 }
-.home-fea-title4{	
+.home-fea-title4{
+    font-family: Microsoft YaHei;		
 	color: #fff;
 	padding-top: 5px;
 	margin-top: 10px;
@@ -65,15 +69,17 @@
 	border: none !important;
 }
 .home-fea-border{
-	border: 4px solid #e9e9e9;
+	border: 2px solid #e9e9e9;
 }
 .home-fea-detail{
 	font-size: 12px !important;
 	text-align: left !important;
 }
 .home-fea-img{
-	padding-left:10px;
-	padding-right: 10px; 
+	  width: 266px;
+	  height: 260px;
+	  padding-left: 10px;
+	  padding-right: 10px;
 }
 .home-fea-h3{
 	padding-left: 12px;
@@ -82,7 +88,7 @@
 	padding-right: 12px;
 }
 .home-reg{
-	font-family: 幼圆;
+	font-family: youyuan;
     color: #666666 !important;
 	font-size: 16px !important;
 	text-align: center;

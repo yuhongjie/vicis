@@ -32,9 +32,12 @@
     border-radius: 20px;
 }
 #mtnav span {
+    font-family: youyuan;
     cursor: pointer;
     display: block;
     white-space: nowrap;
+    font-size: 18px;
+    color: #666;
 }
 #mtnav li.active a.level-top {
     outline: none;

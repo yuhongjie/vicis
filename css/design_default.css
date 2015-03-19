@@ -33,8 +33,8 @@ button.button:hover span span, a.btn-readmore:hover { color:#ffffff; }
   color:#ffffff;
 }
 .old-price .price, .category-products .item .price-box .price, .category-products #products-list .price-box .special-price .price, .category-products #products-list .price-box .regular-price .price, .product-view .product-shop .price-box .regular-price .price, .product-view .product-shop .price-box .special-price { color:#8a7f7f; }
-body { font-family:Montserrat, arial, serif; }
-h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 { font-family:Montserrat, arial, serif; }
+body { font-family: Microsoft YaHei; ,Montserrat, arial, serif; }
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 { font-family:youyuan, Montserrat, arial, serif; }
 .header-container .header .header-act { background-color:rgba(0,0,0,0); }
 .setting-big span, .top-compare .mt-maincompare span.mt-icon-compareajax, .header-container .header label, .header-container .header .block.block-currency .block-title strong span { color:#000000; }
 .header-container .header .block.block-currency .block-title, .header-container .header a, .header-container .header ul li a { color:#999999; }
