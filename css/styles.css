@@ -990,7 +990,7 @@ tr.summary-details-excluded { font-style:italic; }
 .header .form-search {
   position:absolute;
   display:none;
-  right:50px;
+  right:20px;
   top:-20px;
   z-index:8999;
 }

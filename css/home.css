@@ -145,3 +145,34 @@
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#80000000',endColorstr='#00000000',GradientType=1);
 }
+/*二维码*/
+      .side-bar .icon-chat {
+                            background-position: 0 -130px;
+                            position: relative;
+                        }
+                        .side-bar .icon-chat:hover .chat-tips {
+                            display: block;
+                        }
+                        .chat-tips {
+                            z-index:1000;
+                            padding: 20px;
+                            border: 1px solid #d1d2d6;
+                            position: absolute;
+                            right: 78px;
+                            top: -55px;
+                            background-color: #ffffff;
+                            display: none;
+                        }
+                        .chat-tips i {
+                            width: 9px;
+                            height: 16px;
+                            display: inline-block;
+                            position: absolute;
+                            right: -9px;
+                            top: 80px;
+                            background-position:-88px -350px;
+                        }
+                        .chat-tips img {
+                            width: 138px;
+                            height: 138px;
+                        }

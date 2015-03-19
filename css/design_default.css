@@ -41,8 +41,8 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 { font-family:youyuan, Mont
 .header-container .header .block.block-currency .block-title:hover, .header-container .header a:hover, .header-container .header ul li a:hover { color:#181818; }
 input#search { color:#000000; }
 input#search:hover { color:#717171; }
-.header .form-search input#search { border-color:#000000; }
-.header .form-search input#search:hover { border-color:#cccccc; }
+.header .form-search input#search { border-color:#000000;background: #fff;  }
+.header .form-search input#search:hover { border-color:#cccccc;background: #fff; }
 .mt-top-cart .mt-ajax-container p.subtotal span { color:#666666; }
 span.mt-cart-title, .mt-ajax-container .product-details a, .mt-ajax-container .product-details .btn-remove { color:#9aa4b6; }
 span.mt-cart-title:hover, .mt-ajax-container .product-details a:hover, .mt-ajax-container .product-details a:hover { color:#fc686c; }
